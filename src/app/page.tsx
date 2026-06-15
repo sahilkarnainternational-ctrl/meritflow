@@ -108,6 +108,24 @@ const stagger: Variants = {
 
 const variantMap = { fadeUp, fadeLeft, fadeRight, scaleUp };
 
+const FadeIn = ({ children, delay = 0, className = "" }: {
+  children: React.ReactNode; delay?: number; className?: string;
+}) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7, delay, ease: [0.23, 1, 0.32, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 function Reveal({
   children,
   className = "",
@@ -648,7 +666,7 @@ export default function HomePage() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80')" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-cream" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
         </motion.div>
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -833,6 +851,40 @@ export default function HomePage() {
       </Reveal>
       </div>
 
+      {/* ═══ OUR APPROACH ═══ */}
+      <Reveal className="py-24 dark-section-bg relative overflow-hidden">
+        <div className="grain-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full bg-gold/[0.04] blur-[180px]" />
+        </div>
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
+          <FadeIn className="text-center mb-16">
+            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Our Approach</span>
+            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+              A Refined Process
+            </h2>
+            <p className="text-lg text-white/40 max-w-xl mx-auto">
+              Three deliberate steps from discovery to your dream property.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-0">
+            {[
+              { num: "01", title: "Discover", desc: "We listen to understand your vision, lifestyle, and aspirations." },
+              { num: "02", title: "Curate", desc: "Our advisors present only properties that truly match your criteria." },
+              { num: "03", title: "Deliver", desc: "From negotiation to closing, we handle every detail personally." },
+            ].map((step, i) => (
+              <FadeIn key={step.num} delay={i * 0.15} className="approach-step">
+                <div className="text-5xl font-bold text-gold/20 mb-4" style={{ fontFamily: "var(--font-italiana)" }}>{step.num}</div>
+                <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-italiana)" }}>{step.title}</h3>
+                <p className="text-[13px] text-white/40 leading-relaxed max-w-[220px] mx-auto">{step.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
       <div className="section-divider" />
 
       {/* ═══ PROPERTIES ═══ */}
@@ -989,6 +1041,56 @@ export default function HomePage() {
         </div>
       </Reveal>
 
+      {/* ═══ WHY DISCERNING CLIENTS CHOOSE ESTATEX ═══ */}
+      <Reveal className="py-24 dark-section-bg relative overflow-hidden">
+        <div className="grain-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/[0.04] blur-[150px]" />
+        </div>
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
+          <FadeIn className="text-center mb-16">
+            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">The Difference</span>
+            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+              Why Discerning Clients Choose EstateX
+            </h2>
+            <p className="text-lg text-white/40 max-w-2xl mx-auto">
+              We deliver what others cannot — access, intelligence, and an unwavering commitment to excellence.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Lock,
+                title: "Off-Market Access",
+                desc: "500+ exclusive properties never listed publicly. Our network opens doors that remain closed to others.",
+              },
+              {
+                icon: Sparkles,
+                title: "Intelligent Matching",
+                desc: "Our advisors learn your lifestyle to find perfect matches. Every recommendation is deliberate and personal.",
+              },
+              {
+                icon: Heart,
+                title: "White-Glove Service",
+                desc: "From search to closing, every detail handled personally. A single point of contact for your entire journey.",
+              },
+            ].map((f, i) => (
+              <FadeIn key={f.title} delay={i * 0.12}>
+                <div className="feat-card h-full">
+                  <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mb-6">
+                    <f.icon className="w-5 h-5 text-gold" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-italiana)" }}>{f.title}</h3>
+                  <p className="text-[13px] text-white/40 leading-relaxed">{f.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
       {/* ═══ SOLD PROPERTIES CAROUSEL ═══ */}
       <Reveal className="py-24 dark-section-bg relative overflow-hidden">
         <div className="grain-overlay" />
@@ -1038,6 +1140,30 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </Reveal>
+
+      {/* ═══ THE ESTATEX DIFFERENCE — QUOTE BANNER ═══ */}
+      <Reveal className="quote-banner py-28 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+        </div>
+        <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
+          <FadeIn>
+            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
+              &ldquo;EstateX found us our dream home in 3 weeks. The off-market access and personal attention was unlike anything we experienced.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="James & Victoria M." className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-[13px] text-white">James & Victoria M.</div>
+                <div className="text-[11px] text-white/30">New York</div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </Reveal>
 
@@ -1118,15 +1244,30 @@ export default function HomePage() {
                     </div>
 
                     <h3 className="text-2xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
-                      The Intelligence
+                      Why EstateX
                     </h3>
                     <p className="text-[13px] text-white/40 leading-relaxed mb-6">
                       Our advisors combine decades of market expertise with intelligent tools to deliver results others cannot.
                     </p>
 
+                    <div className="space-y-3 mb-8">
+                      {[
+                        { icon: Lock, text: "Exclusive Off-Market Access" },
+                        { icon: Clock, text: "24/7 Concierge Support" },
+                        { icon: BarChart3, text: "Market Intelligence Reports" },
+                        { icon: Camera, text: "Private Showings" },
+                        { icon: Globe, text: "Global Network" },
+                      ].map((f) => (
+                        <div key={f.text} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                          <f.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                          <span className="text-[13px] text-white/60 font-medium">{f.text}</span>
+                        </div>
+                      ))}
+                    </div>
+
                     <div className="flex flex-wrap gap-2 mb-8">
-                      {["Market Predictions", "Price Analytics", "Lifestyle Matching", "Instant Scheduling"].map((f) => (
-                        <span key={f} className="px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[11px] font-semibold text-white/50 flex items-center gap-1.5">
+                      {["Market Predictions", "Price Analytics", "Lifestyle Matching"].map((f) => (
+                        <span key={f} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/8 text-[10px] font-semibold text-white/50 flex items-center gap-1.5">
                           <CheckCircle2 className="w-3 h-3 text-gold" /> {f}
                         </span>
                       ))}
@@ -1149,16 +1290,16 @@ export default function HomePage() {
                       ))}
                     </div>
 
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 mb-8">
                       <a href="#contact" className="btn-gold text-[11px] w-full justify-center">
                         <span><MessageCircle className="w-4 h-4" /> Start Conversation <ArrowRight className="w-4 h-4" /></span>
                       </a>
                       <a href="#contact" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px] w-full justify-center">
-                        <Phone className="w-4 h-4" /> Schedule Call
+                        <Calendar className="w-4 h-4" /> Schedule a Private Consultation
                       </a>
                     </div>
 
-                    <div className="mt-8 pt-8 border-t border-white/5">
+                    <div className="pt-8 border-t border-white/5">
                       <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em] mb-4">Our Track Record</h4>
                       <div className="grid grid-cols-2 gap-3">
                         <div className="stat-mini">

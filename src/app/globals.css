@@ -355,3 +355,61 @@ body {
   padding: 1rem 1.25rem;
   text-align: center;
 }
+
+/* ─── Quote Banner ─── */
+.quote-banner {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  position: relative;
+  overflow: hidden;
+}
+.quote-banner::before {
+  content: '\201C';
+  position: absolute;
+  top: -2rem;
+  left: 2rem;
+  font-size: 20rem;
+  font-family: 'Italiana', serif;
+  color: rgba(184,150,90,0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ─── Approach Step ─── */
+.approach-step {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+}
+.approach-step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  width: 2rem;
+  height: 1px;
+  background: rgba(184,150,90,0.3);
+}
+.approach-step:last-child::after { display: none; }
+
+/* ─── Feature Card ─── */
+.feat-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.feat-card:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-6px);
+  border-color: rgba(184,150,90,0.2);
+}
+
+/* ─── Button Hover Scale ─── */
+.btn-gold, .btn-outline, .btn-outline-dark {
+  transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.btn-gold:hover, .btn-outline:hover, .btn-outline-dark:hover {
+  transform: translateY(-2px) scale(1.02);
+}

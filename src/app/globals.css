@@ -90,6 +90,106 @@ body {
 }
 .btn-outline:hover { border-color: #b8965a; color: #b8965a; }
 
+/* ─── Filter Pills (Liquid Glass) ─── */
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  border: 1px solid rgba(26,26,26,0.1);
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  color: #1a1a1a;
+  white-space: nowrap;
+  user-select: none;
+}
+.filter-pill:hover { border-color: #b8965a; color: #b8965a; }
+.filter-pill.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+.filter-pill-gold.active {
+  background: linear-gradient(135deg, #b8965a, #d4b07a);
+  color: #1a1a1a;
+  border-color: transparent;
+}
+
+/* ─── Glass Card Dark ─── */
+.glass-card-dark {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.glass-card-dark:hover {
+  border-color: rgba(184,150,90,0.2);
+  box-shadow: 0 0 40px rgba(184,150,90,0.05);
+}
+
+/* ─── Dark Section Background ─── */
+.dark-section-bg {
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+.dark-section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(184,150,90,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(184,150,90,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Consultation Form Dark ─── */
+.consultation-form-dark {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.consultation-form-dark:hover {
+  border-color: rgba(184,150,90,0.2);
+  box-shadow: 0 0 60px rgba(184,150,90,0.06);
+}
+
+/* ─── Testimonial Bento Card ─── */
+.bento-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+  position: relative;
+  overflow: hidden;
+}
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+.bento-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(184,150,90,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(184,150,90,0.05);
+}
+
 /* ─── Animations ─── */
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
 @keyframes float-delay { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
@@ -97,10 +197,14 @@ body {
 @keyframes fade-in { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
 @keyframes scale-in { from{opacity:0;transform:scale(0.95)} to{opacity:1;transform:scale(1)} }
 @keyframes slide-up { from{opacity:0;transform:translateY(100%)} to{opacity:1;transform:translateY(0)} }
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+@keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(184,150,90,0.3)} 50%{box-shadow:0 0 20px 4px rgba(184,150,90,0.15)} }
 
 .animate-float { animation: float 7s ease-in-out infinite; }
 .animate-float-delay { animation: float-delay 7s ease-in-out infinite 2s; }
 .animate-marquee { animation: marquee 50s linear infinite; }
+.animate-shimmer { animation: shimmer 3s ease-in-out infinite; background-size: 200% 100%; }
+.animate-pulse-gold { animation: pulse-gold 3s ease-in-out infinite; }
 
 /* ─── Section Spacing ─── */
 .section-lg { padding: 6rem 1.5rem; }
@@ -127,7 +231,51 @@ body {
 
 /* ─── Dividers ─── */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(26,26,26,0.08), transparent); }
+.divider-gold { height: 1px; background: linear-gradient(90deg, transparent, rgba(184,150,90,0.3), transparent); }
 
 /* ─── Custom scrollbar for modal ─── */
 .modal-scroll::-webkit-scrollbar { width: 4px; }
 .modal-scroll::-webkit-scrollbar-thumb { background: rgba(184,150,90,0.3); border-radius: 2px; }
+
+/* ─── Star Rating ─── */
+.star-gold { color: #b8965a; fill: #b8965a; }
+
+/* ─── Dark input styling ─── */
+.input-dark {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  outline: none;
+}
+.input-dark::placeholder { color: rgba(255,255,255,0.3); }
+.input-dark:focus {
+  border-color: #b8965a;
+  box-shadow: 0 0 0 3px rgba(184,150,90,0.1);
+  background: rgba(255,255,255,0.08);
+}
+.input-dark option {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ─── Glass nav ─── */
+.nav-glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ─── Stats bar dark ─── */
+.stats-dark {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+}

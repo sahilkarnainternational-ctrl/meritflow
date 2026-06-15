@@ -17,11 +17,11 @@ const italiana = Italiana({
 });
 
 export const metadata: Metadata = {
-  title: "EstateAI — AI-Powered Luxury Real Estate",
+  title: "EstateX — AI-Powered Real Estate Agency",
   description:
-    "Premium AI property concierge. Buy, sell, and rent luxury properties with intelligent guidance, market predictions, and white-glove service.",
+    "Premium AI-powered real estate agency. Buy, sell, and rent luxury properties with intelligent guidance, market predictions, and white-glove concierge service.",
   openGraph: {
-    title: "EstateAI — AI-Powered Luxury Real Estate",
+    title: "EstateX — AI-Powered Real Estate Agency",
     description: "Premium AI property concierge.",
     type: "website",
     locale: "en_US",

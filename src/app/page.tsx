@@ -45,6 +45,15 @@ import {
   Quote,
   Briefcase,
   GraduationCap,
+  ChevronDown,
+  SlidersHorizontal,
+  Home,
+  Castle,
+  Trees,
+  Building,
+  Warehouse,
+  Landmark,
+  Mountain,
 } from "lucide-react";
 
 function AnimatedCounter({ value, prefix = "", suffix = "", duration = 2000 }: {
@@ -250,7 +259,7 @@ const properties = [
     beds: 9,
     baths: 11,
     sqft: "21,500",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
     tag: "Ultra Luxury",
     owner: "Pacific Crest Holdings",
     agent: "Alexander Pierce",
@@ -268,7 +277,7 @@ const properties = [
     beds: 8,
     baths: 9,
     sqft: "16,800",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
     tag: "Oceanfront",
     owner: "Harrington Family Office",
     agent: "Katherine Bolton",
@@ -286,7 +295,7 @@ const properties = [
     beds: 6,
     baths: 7,
     sqft: "10,200",
-    image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80",
     tag: "Ski-In/Ski-Out",
     owner: "Aspen Peak Ventures",
     agent: "Elena Rodriguez",
@@ -304,7 +313,7 @@ const properties = [
     beds: 6,
     baths: 7,
     sqft: "9,400",
-    image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80",
     tag: "Waterfront",
     owner: "Meridian Coastal Trust",
     agent: "David Chen",
@@ -322,7 +331,7 @@ const properties = [
     beds: 3,
     baths: 3,
     sqft: "4,600",
-    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&q=80",
     tag: "Penthouse",
     owner: "Hudson Square Partners",
     agent: "Victoria Ashford",
@@ -340,7 +349,7 @@ const properties = [
     beds: 5,
     baths: 6,
     sqft: "8,100",
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
     tag: "Desert Modern",
     owner: "Sonoran Holdings LLC",
     agent: "Marcus Reid",
@@ -357,19 +366,19 @@ const testimonials = [
     name: "Victoria Sterling",
     role: "CEO, Sterling Holdings",
     quote:
-      "EstateAI found us a penthouse we never would have discovered on our own. The AI understood our lifestyle preferences better than any agent we've worked with in twenty years.",
+      "EstateX found us a penthouse we never would have discovered on our own. The AI understood our lifestyle preferences better than any agent we've worked with in twenty years.",
     rating: 5,
-    initials: "VS",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+    size: "large" as const,
   },
   {
     name: "James Montgomery III",
     role: "Montgomery Family Office",
     quote:
-      "The market intelligence is unparalleled. We've worked with every major brokerage globally — EstateAI's technology gives them an edge nobody else has.",
+      "The market intelligence is unparalleled. We've worked with every major brokerage globally — EstateX's technology gives them an edge nobody else has.",
     rating: 5,
-    initials: "JM",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80",
+    size: "normal" as const,
   },
   {
     name: "Sarah Chen-Park",
@@ -377,8 +386,8 @@ const testimonials = [
     quote:
       "As someone who values efficiency, the AI-powered approach was exactly what I needed. Found my dream home in half the usual time. The concierge service is exceptional.",
     rating: 5,
-    initials: "SC",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
+    size: "normal" as const,
   },
   {
     name: "Robert Harrington",
@@ -386,8 +395,44 @@ const testimonials = [
     quote:
       "From the first conversation to closing, every detail was handled with absolute precision. The AI predicted market shifts that saved us $2M on our acquisition.",
     rating: 5,
-    initials: "RH",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+    size: "tall" as const,
+  },
+  {
+    name: "Elena Vasquez",
+    role: "Interior Design Director",
+    quote:
+      "They don't just find properties — they curate experiences. Every recommendation felt like it was designed specifically for my aesthetic and lifestyle.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=200&q=80",
+    size: "normal" as const,
+  },
+  {
+    name: "Marcus Thompson",
+    role: "Real Estate Investor",
+    quote:
+      "In 15 years of luxury real estate investment, I've never seen AI applied this intelligently. The ROI analytics alone are worth their weight in gold.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    size: "normal" as const,
+  },
+  {
+    name: "Amanda Chen",
+    role: "Architecture Firm Partner",
+    quote:
+      "Working with EstateX felt like having a brilliant co-pilot who understands both architecture and market dynamics. They found us three perfect properties in one week.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+    size: "large" as const,
+  },
+  {
+    name: "David Kim",
+    role: "Venture Capitalist",
+    quote:
+      "Speed, precision, discretion — EstateX delivers on all three. The AI concierge responded to my requests at 2am and had three qualified options by morning.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80",
+    size: "tall" as const,
   },
 ];
 
@@ -398,8 +443,9 @@ const stats = [
   { value: 24, suffix: "/7", label: "AI Concierge Online", icon: Clock, prefix: "" },
 ];
 
+const propertyTypes = ["All", "Penthouse", "Estate", "Villa", "Lodge", "Chalet", "Mansion", "Loft", "Retreat", "Oasis"];
+
 const priceFilters = ["All Prices", "Under $10M", "$10M - $20M", "Over $20M"];
-const typeFilters = ["All Types", "Penthouse", "Estate", "Villa", "Lodge", "Chalet", "Mansion", "Loft", "Retreat", "Oasis"];
 const bedsFilters = ["Any Beds", "4+ Beds", "5+ Beds", "6+ Beds", "7+ Beds"];
 const sortOptions = ["Featured", "Price: High to Low", "Price: Low to High", "Newest"];
 
@@ -420,7 +466,7 @@ function filterProperties(
   else if (priceFilter === "$10M - $20M") result = result.filter((p) => { const pr = parsePrice(p.price); return pr >= 10000000 && pr <= 20000000; });
   else if (priceFilter === "Over $20M") result = result.filter((p) => parsePrice(p.price) > 20000000);
 
-  if (typeFilter !== "All Types") result = result.filter((p) => p.type === typeFilter);
+  if (typeFilter !== "All") result = result.filter((p) => p.type === typeFilter);
 
   if (bedsFilter === "4+ Beds") result = result.filter((p) => p.beds >= 4);
   else if (bedsFilter === "5+ Beds") result = result.filter((p) => p.beds >= 5);
@@ -451,7 +497,7 @@ export default function HomePage() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [selectedProperty, setSelectedProperty] = useState<typeof properties[0] | null>(null);
   const [priceFilter, setPriceFilter] = useState("All Prices");
-  const [typeFilter, setTypeFilter] = useState("All Types");
+  const [typeFilter, setTypeFilter] = useState("All");
   const [bedsFilter, setBedsFilter] = useState("Any Beds");
   const [sortBy, setSortBy] = useState("Featured");
   const [cardTilts, setCardTilts] = useState<Record<number, { x: number; y: number }>>({});
@@ -491,6 +537,21 @@ export default function HomePage() {
     setCardTilts((prev) => ({ ...prev, [id]: { x: 0, y: 0 } }));
   };
 
+  const typeIcon = (type: string) => {
+    switch (type) {
+      case "Penthouse": return Building2;
+      case "Estate": return Landmark;
+      case "Villa": return Home;
+      case "Lodge": return Trees;
+      case "Chalet": return Mountain;
+      case "Mansion": return Castle;
+      case "Loft": return Warehouse;
+      case "Retreat": return Trees;
+      case "Oasis": return Building;
+      default: return Search;
+    }
+  };
+
   return (
     <main className="min-h-screen bg-cream">
       {/* ═══ NAV ═══ */}
@@ -509,7 +570,7 @@ export default function HomePage() {
                 <Building2 className="w-5 h-5 text-gold" />
               </div>
               <span className="text-xl font-bold tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
-                Estate<span className="text-gold">AI</span>
+                Estate<span className="text-gold">X</span>
               </span>
             </a>
 
@@ -586,7 +647,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-10"
             >
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">AI-Powered Luxury Real Estate</span>
+              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — AI-Powered Real Estate Agency</span>
             </motion.div>
 
             <motion.h1
@@ -755,53 +816,90 @@ export default function HomePage() {
       </div>
 
       {/* ═══ PROPERTIES ═══ */}
-      <Reveal id="properties" className="section-xl bg-white relative">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+      <Reveal id="properties" className="section-xl dark-section-bg relative">
+        <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80')" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
+
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-16">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Portfolio</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
+            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
               Signature Listings
             </h2>
-            <p className="text-lg text-slate-mid max-w-2xl mx-auto">
+            <p className="text-lg text-white/40 max-w-2xl mx-auto">
               Each property is hand-selected, AI-verified for value, and presented with the detail it deserves.
             </p>
           </Reveal>
 
+          {/* ─── FILTER BAR ─── */}
           <Reveal className="mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease }}
-              className="flex flex-wrap gap-3 p-4 rounded-2xl bg-cream border border-black/5"
-            >
-              {[
-                { label: priceFilter, options: priceFilters, onChange: setPriceFilter },
-                { label: typeFilter, options: typeFilters, onChange: setTypeFilter },
-                { label: bedsFilter, options: bedsFilters, onChange: setBedsFilter },
-                { label: sortBy, options: sortOptions, onChange: setSortBy },
-              ].map((filter, fi) => (
-                <motion.div
-                  key={fi}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: fi * 0.1, ease }}
-                  className="relative"
+            <div className="mb-6">
+              <p className="text-[11px] text-white/30 uppercase tracking-[0.2em] font-semibold mb-4 flex items-center gap-2">
+                <SlidersHorizontal className="w-3.5 h-3.5" /> Property Type
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {propertyTypes.map((type, i) => {
+                  const Icon = typeIcon(type);
+                  return (
+                    <motion.button
+                      key={type}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.04, ease }}
+                      onClick={() => setTypeFilter(type)}
+                      className={`filter-pill ${typeFilter === type ? (type === "All" ? "filter-pill-gold active" : "active") : ""}`}
+                    >
+                      <Icon className="w-3.5 h-3.5" />
+                      {type}
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="text-[11px] text-white/30 uppercase tracking-[0.2em] font-semibold mr-2">Filters</p>
+
+              <div className="relative">
+                <select
+                  value={priceFilter}
+                  onChange={(e) => setPriceFilter(e.target.value)}
+                  className="filter-pill appearance-none pr-8 cursor-pointer"
                 >
-                  <select
-                    value={filter.label}
-                    onChange={(e) => filter.onChange(e.target.value)}
-                    className="appearance-none px-5 py-3 pr-10 bg-white border border-black/8 rounded-xl text-[12px] font-medium text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all cursor-pointer hover:border-gold/50"
-                  >
-                    {filter.options.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                  <ChevronRight className="absolute right-3 top-1/2 -translate-y-1/2 rotate-90 w-4 h-4 text-slate-light pointer-events-none" />
-                </motion.div>
-              ))}
-            </motion.div>
+                  {priceFilters.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none text-slate-light" />
+              </div>
+
+              <div className="relative">
+                <select
+                  value={bedsFilter}
+                  onChange={(e) => setBedsFilter(e.target.value)}
+                  className="filter-pill appearance-none pr-8 cursor-pointer"
+                >
+                  {bedsFilters.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none text-slate-light" />
+              </div>
+
+              <div className="relative">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="filter-pill appearance-none pr-8 cursor-pointer"
+                >
+                  {sortOptions.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none text-slate-light" />
+              </div>
+            </div>
           </Reveal>
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.05 }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -810,7 +908,7 @@ export default function HomePage() {
                 key={p.id}
                 variants={fadeUp}
                 transition={{ duration: 0.5, ease }}
-                className="group rounded-3xl bg-cream border border-black/5 overflow-hidden cursor-pointer"
+                className="group glass-card-dark overflow-hidden cursor-pointer"
                 style={{
                   transform: `perspective(800px) rotateY(${cardTilts[p.id]?.x || 0}deg) rotateX(${cardTilts[p.id]?.y || 0}deg)`,
                   transition: "transform 0.3s cubic-bezier(0.23,1,0.32,1)",
@@ -821,7 +919,7 @@ export default function HomePage() {
               >
                 <div className="relative h-[300px] img-zoom">
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="px-4 py-1.5 rounded-full bg-gold text-navy text-[10px] font-bold uppercase tracking-wider">{p.tag}</span>
                   </div>
@@ -837,18 +935,18 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-2 text-slate-mid text-[11px] uppercase tracking-wider mb-2 font-medium">
+                  <div className="flex items-center gap-2 text-white/40 text-[11px] uppercase tracking-wider mb-2 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-gold" /> {p.location.split(",")[0]}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
-                  <div className="flex items-center gap-4 text-[12px] text-slate-mid mb-4">
+                  <h3 className="text-xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
+                  <div className="flex items-center gap-4 text-[12px] text-white/40 mb-4">
                     <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5" /> {p.beds} Beds</span>
                     <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5" /> {p.baths} Baths</span>
                     <span className="flex items-center gap-1"><Square className="w-3.5 h-3.5" /> {p.sqft} ft²</span>
                   </div>
-                  <div className="flex items-center justify-between pt-4 border-t border-black/5">
+                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
                     <span className="text-xl font-bold text-gradient-gold">{p.price}</span>
-                    <span className="text-[11px] text-slate-light font-medium">{p.type}</span>
+                    <span className="text-[11px] text-white/30 font-medium">{p.type}</span>
                   </div>
                 </div>
               </motion.article>
@@ -857,11 +955,11 @@ export default function HomePage() {
 
           {filteredProperties.length === 0 && (
             <div className="text-center py-20">
-              <Search className="w-12 h-12 text-slate-light mx-auto mb-4" />
-              <p className="text-lg text-slate-mid font-medium">No properties match your filters</p>
+              <Search className="w-12 h-12 text-white/20 mx-auto mb-4" />
+              <p className="text-lg text-white/40 font-medium">No properties match your filters</p>
               <button
-                onClick={() => { setPriceFilter("All Prices"); setTypeFilter("All Types"); setBedsFilter("Any Beds"); setSortBy("Featured"); }}
-                className="mt-4 text-[12px] text-gold font-semibold uppercase tracking-wider hover:text-navy transition-colors"
+                onClick={() => { setPriceFilter("All Prices"); setTypeFilter("All"); setBedsFilter("Any Beds"); setSortBy("Featured"); }}
+                className="mt-4 text-[12px] text-gold font-semibold uppercase tracking-wider hover:text-white transition-colors"
               >
                 Clear All Filters
               </button>
@@ -870,122 +968,127 @@ export default function HomePage() {
         </div>
       </Reveal>
 
-      {/* ═══ AI CONCIERGE ═══ */}
-      <Reveal id="concierge" className="section-xl bg-navy relative overflow-hidden">
+      {/* ═══ TESTIMONIALS + AI CONCIERGE (Merged Bento) ═══ */}
+      <div id="concierge">
+      <Reveal className="section-xl dark-section-bg relative">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')" }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
+          <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/[0.04] blur-[150px]" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-gold/[0.03] blur-[120px]" />
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
-          <Reveal className="text-center mb-24">
-            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Intelligence</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
-              Your AI Concierge
-            </h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto">
-              Available around the clock. Ask anything — from market trends to scheduling a private viewing.
-            </p>
-          </Reveal>
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-start">
+            {/* ─── LEFT: Testimonials ─── */}
+            <div>
+              <Reveal className="mb-12">
+                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Testimonials</span>
+                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight mb-4 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+                  What People Say
+                </h2>
+                <p className="text-lg text-white/40 max-w-lg">
+                  Our clients expect the extraordinary. Here&apos;s what they have to say.
+                </p>
+              </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Reveal variant="fadeUp" className="md:col-span-2 md:row-span-2">
-              <div className="h-full p-10 md:p-14 rounded-3xl border border-white/10 glass-dark relative overflow-hidden group min-h-[400px]">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-gold/[0.08] rounded-full blur-[100px] group-hover:bg-gold/[0.12] transition-all duration-700" />
-                <div className="relative z-10 h-full flex flex-col justify-between">
-                  <div>
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-8">
-                      <Sparkles className="w-7 h-7 text-navy" />
-                    </div>
-                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
-                      Conversations<br />That Move You
-                    </h3>
-                    <p className="text-white/50 leading-relaxed max-w-lg text-lg">
-                      Our AI concierge understands natural language, learns your preferences, and delivers personalized property recommendations — in real time.
+              {/* Bento Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                {testimonials.map((t, i) => (
+                  <motion.div
+                    key={t.name}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: i * 0.08, ease }}
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className={`bento-card ${
+                      t.size === "large" ? "col-span-2" :
+                      t.size === "tall" ? "row-span-2" : ""
+                    }`}
+                  >
+                    <Quote className="w-6 h-6 text-gold/30 mb-4" />
+                    <p className="text-[13px] text-white/55 leading-relaxed mb-6">
+                      &ldquo;{t.quote}&rdquo;
                     </p>
-                  </div>
-                  <div className="flex flex-wrap gap-3 mt-12">
-                    {["Natural Language", "Market Predictions", "Instant Scheduling", "Multi-Language"].map((f) => (
-                      <span key={f} className="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-semibold text-white/60 flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-gold" /> {f}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal variant="fadeUp" amount={0.15}>
-              <div className="p-8 rounded-3xl border border-white/10 bg-white/[0.03] h-full">
-                <Zap className="w-8 h-8 text-gold mb-5" />
-                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-italiana)" }}>Instant Responses</h4>
-                <p className="text-[14px] text-white/40 leading-relaxed">Get answers in under two seconds. Property questions, pricing queries, market insights — all instant.</p>
-              </div>
-            </Reveal>
-
-            <Reveal variant="fadeUp" amount={0.15}>
-              <div className="p-8 rounded-3xl border border-white/10 bg-white/[0.03] h-full">
-                <Shield className="w-8 h-8 text-gold mb-5" />
-                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-italiana)" }}>Verified & Secure</h4>
-                <p className="text-[14px] text-white/40 leading-relaxed">Every listing AI-verified. Bank-level encryption. Your data stays completely private.</p>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact" className="btn-gold"><span><MessageCircle className="w-4 h-4" /> Start a Conversation <ArrowRight className="w-4 h-4" /></span></a>
-            <a href="#contact" className="btn-outline-dark !border-white/20 !text-white hover:!border-gold hover:!text-gold"><Phone className="w-4 h-4" /> Schedule a Call</a>
-          </Reveal>
-        </div>
-      </Reveal>
-
-      {/* ═══ TESTIMONIALS ═══ */}
-      <Reveal className="section-xl bg-cream-warm relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920&q=80')" }} />
-        </div>
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
-          <Reveal className="text-center mb-24">
-            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Testimonials</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
-              Trusted by the Discerning
-            </h2>
-            <p className="text-lg text-slate-mid max-w-2xl mx-auto">
-              Our clients expect the extraordinary. Here&apos;s what they have to say.
-            </p>
-          </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((t) => (
-              <Reveal key={t.name} variant="fadeUp" amount={0.15}>
-                <motion.div whileHover={{ y: -6 }} className="p-10 rounded-3xl bg-navy relative overflow-hidden group h-full">
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-gold/[0.06] rounded-full blur-[80px]" />
-                  <Quote className="w-10 h-10 text-gold/30 mb-6" />
-                  <p className="text-[15px] text-white/70 leading-relaxed mb-10 relative z-10">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="flex items-center gap-4 relative z-10">
-                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gold/30">
-                      <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30 flex-shrink-0">
+                        <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-[13px] text-white truncate">{t.name}</div>
+                        <div className="text-[11px] text-white/30 truncate">{t.role}</div>
+                      </div>
+                      <div className="flex gap-0.5 flex-shrink-0">
+                        {Array.from({ length: t.rating }).map((_, j) => (
+                          <Star key={j} className="w-3 h-3 fill-gold text-gold" />
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-[14px] text-white">{t.name}</div>
-                      <div className="text-[12px] text-white/40">{t.role}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* ─── RIGHT: AI Concierge ─── */}
+            <div className="lg:sticky lg:top-32">
+              <Reveal variant="fadeRight">
+                <div className="glass-card-dark p-8 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-60 h-60 bg-gold/[0.08] rounded-full blur-[100px] group-hover:bg-gold/[0.12] transition-all duration-700" />
+
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-6 animate-pulse-gold">
+                      <Sparkles className="w-6 h-6 text-navy" />
                     </div>
-                    <div className="flex gap-1">
-                      {Array.from({ length: t.rating }).map((_, j) => (
-                        <Star key={j} className="w-3.5 h-3.5 fill-gold text-gold" />
+
+                    <h3 className="text-2xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+                      The Intelligence
+                    </h3>
+                    <p className="text-[13px] text-white/40 leading-relaxed mb-6">
+                      Your AI concierge. Available 24/7. Ask anything — from market trends to scheduling a private viewing.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {["Natural Language", "Market Predictions", "Instant Scheduling"].map((f) => (
+                        <span key={f} className="px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[11px] font-semibold text-white/50 flex items-center gap-1.5">
+                          <CheckCircle2 className="w-3 h-3 text-gold" /> {f}
+                        </span>
                       ))}
                     </div>
+
+                    <div className="space-y-3 mb-8">
+                      {[
+                        { icon: Zap, title: "Sub-2s Response", desc: "Instant answers to any property question." },
+                        { icon: Shield, title: "Verified & Secure", desc: "Bank-level encryption. Your data stays private." },
+                      ].map((f) => (
+                        <div key={f.title} className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                          <div className="flex items-center gap-3">
+                            <f.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                            <div>
+                              <div className="text-[13px] font-semibold text-white">{f.title}</div>
+                              <div className="text-[11px] text-white/30">{f.desc}</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <a href="#contact" className="btn-gold text-[11px] w-full justify-center">
+                        <span><MessageCircle className="w-4 h-4" /> Start Conversation <ArrowRight className="w-4 h-4" /></span>
+                      </a>
+                      <a href="#contact" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px] w-full justify-center">
+                        <Phone className="w-4 h-4" /> Schedule Call
+                      </a>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </Reveal>
-            ))}
+            </div>
           </div>
         </div>
       </Reveal>
+      </div>
 
       {/* ═══ TRUST SIGNALS ═══ */}
       <Reveal className="py-20 bg-white border-y border-black/5">
@@ -1012,34 +1115,36 @@ export default function HomePage() {
       </Reveal>
 
       {/* ═══ CONTACT & BOOKING ═══ */}
-      <Reveal id="contact" className="section-xl bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.015]">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80')" }} />
+      <Reveal id="contact" className="section-xl dark-section-bg relative">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80')" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         </div>
+
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-24">
             <Reveal variant="fadeLeft">
               <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Get in Touch</span>
-              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
+              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                 Let&apos;s Discuss Your<br />Next Move
               </h2>
-              <p className="text-lg text-slate-mid leading-relaxed mb-14 max-w-md">
+              <p className="text-lg text-white/40 leading-relaxed mb-14 max-w-md">
                 Complimentary consultations with our luxury property specialists. Available seven days a week.
               </p>
 
               <div className="space-y-8 mb-14">
                 {[
                   { icon: Phone, label: "+1 (888) 555-0199", sub: "24/7 Direct Line" },
-                  { icon: Mail, label: "concierge@estateai.com", sub: "1-hour Response Guarantee" },
+                  { icon: Mail, label: "concierge@estatex.com", sub: "1-hour Response Guarantee" },
                   { icon: MapPin, label: "500 Fifth Avenue, Suite 2400", sub: "New York, NY 10110" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-5">
-                    <div className="w-12 h-12 rounded-xl bg-cream border border-black/5 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl glass-card-dark flex items-center justify-center flex-shrink-0">
                       <c.icon className="w-5 h-5 text-gold" />
                     </div>
                     <div>
-                      <div className="font-semibold text-[15px] text-navy">{c.label}</div>
-                      <div className="text-[12px] text-slate-mid mt-0.5">{c.sub}</div>
+                      <div className="font-semibold text-[15px] text-white">{c.label}</div>
+                      <div className="text-[12px] text-white/30 mt-0.5">{c.sub}</div>
                     </div>
                   </div>
                 ))}
@@ -1047,31 +1152,31 @@ export default function HomePage() {
 
               <div className="flex gap-4">
                 <a href="#concierge" className="btn-gold text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with AI</span></a>
-                <a href="#" className="btn-outline-dark text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
+                <a href="#" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
               </div>
             </Reveal>
 
             <Reveal variant="fadeRight">
-              <div className="p-10 md:p-12 rounded-3xl bg-cream border border-black/5">
-                <h3 className="text-2xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
+              <div className="consultation-form-dark p-10 md:p-12">
+                <h3 className="text-2xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                   Book a Consultation
                 </h3>
-                <p className="text-[13px] text-slate-mid mb-8">Fill in your details and we&apos;ll get back to you within 1 hour.</p>
+                <p className="text-[13px] text-white/35 mb-8">Fill in your details and we&apos;ll get back to you within 1 hour.</p>
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-navy placeholder-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all" />
-                    <input type="text" placeholder="Last Name" className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-navy placeholder-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all" />
+                    <input type="text" placeholder="First Name" className="input-dark" />
+                    <input type="text" placeholder="Last Name" className="input-dark" />
                   </div>
-                  <input type="email" placeholder="Email Address" className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-navy placeholder-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all" />
-                  <input type="tel" placeholder="Phone Number" className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-navy placeholder-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all" />
-                  <select className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all appearance-none">
-                    <option>I&apos;m looking to...</option>
+                  <input type="email" placeholder="Email Address" className="input-dark" />
+                  <input type="tel" placeholder="Phone Number" className="input-dark" />
+                  <select className="input-dark appearance-none cursor-pointer">
+                    <option value="">I&apos;m looking to...</option>
                     <option>Buy a Property</option>
                     <option>Sell a Property</option>
                     <option>Rent a Property</option>
                     <option>Investment Consultation</option>
                   </select>
-                  <textarea rows={4} placeholder="Tell us about your ideal property..." className="w-full px-5 py-4 bg-white border border-black/8 rounded-xl text-[14px] text-navy placeholder-slate-light focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/10 transition-all resize-none" />
+                  <textarea rows={4} placeholder="Tell us about your ideal property..." className="input-dark resize-none" />
                   <button type="submit" className="w-full btn-gold py-4">
                     <span><Send className="w-4 h-4" /> Book a Consultation</span>
                   </button>
@@ -1092,11 +1197,11 @@ export default function HomePage() {
                   <Building2 className="w-5 h-5 text-navy" />
                 </div>
                 <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
-                  Estate<span className="text-gold">AI</span>
+                  Estate<span className="text-gold">X</span>
                 </span>
               </div>
               <p className="text-[13px] text-white/35 leading-relaxed max-w-xs">
-                Redefining luxury real estate through artificial intelligence and white-glove service.
+                EstateX — AI-Powered Real Estate Agency. Redefining luxury real estate through artificial intelligence and white-glove service.
               </p>
             </div>
             {[
@@ -1118,7 +1223,7 @@ export default function HomePage() {
           </div>
           <div className="divider-gold mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[12px] text-white/25">© 2026 EstateAI. All rights reserved.</p>
+            <p className="text-[12px] text-white/25">&copy; 2026 EstateX. All rights reserved.</p>
             <div className="flex gap-6">
               {["LinkedIn", "Twitter", "Instagram"].map((s) => (
                 <a key={s} href="#" className="text-[12px] text-white/25 hover:text-gold transition-colors">{s}</a>

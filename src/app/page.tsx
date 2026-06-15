@@ -44,7 +44,6 @@ import {
   Camera,
   Quote,
   Briefcase,
-  GraduationCap,
   ChevronDown,
   SlidersHorizontal,
   Home,
@@ -361,12 +360,31 @@ const properties = [
   },
 ];
 
+const soldProperties = [
+  { id: 1, price: "$8.2M", location: "Manhattan, NY", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80" },
+  { id: 2, price: "$14.5M", location: "Malibu, CA", image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80" },
+  { id: 3, price: "$6.8M", location: "Aspen, CO", image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400&q=80" },
+  { id: 4, price: "$5.4M", location: "Miami, FL", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80" },
+  { id: 5, price: "$11.2M", location: "Napa Valley, CA", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" },
+  { id: 6, price: "$4.9M", location: "Lake Tahoe, NV", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80" },
+  { id: 7, price: "$18.7M", location: "Bel Air, CA", image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400&q=80" },
+  { id: 8, price: "$7.3M", location: "Coral Gables, FL", image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80" },
+  { id: 9, price: "$9.1M", location: "Beverly Hills, CA", image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80" },
+  { id: 10, price: "$3.8M", location: "Scottsdale, AZ", image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=400&q=80" },
+  { id: 11, price: "$12.6M", location: "The Hamptons, NY", image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=400&q=80" },
+  { id: 12, price: "$6.1M", location: "Austin, TX", image: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=400&q=80" },
+  { id: 13, price: "$8.9M", location: "Nashville, TN", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" },
+  { id: 14, price: "$4.2M", location: "Charlotte, NC", image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80" },
+  { id: 15, price: "$15.3M", location: "Greenwich, CT", image: "https://images.unsplash.com/photo-1576940758220-1a4f1c8f92db?w=400&q=80" },
+  { id: 16, price: "$7.8M", location: "Dallas, TX", image: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=400&q=80" },
+];
+
 const testimonials = [
   {
     name: "Victoria Sterling",
     role: "CEO, Sterling Holdings",
     quote:
-      "EstateX found us a penthouse we never would have discovered on our own. The AI understood our lifestyle preferences better than any agent we've worked with in twenty years.",
+      "EstateX found us a property we never would have discovered on our own. The market intelligence was better than any brokerage we have worked with in twenty years.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
     size: "large" as const,
@@ -375,7 +393,7 @@ const testimonials = [
     name: "James Montgomery III",
     role: "Montgomery Family Office",
     quote:
-      "The market intelligence is unparalleled. We've worked with every major brokerage globally — EstateX's technology gives them an edge nobody else has.",
+      "The market intelligence is unparalleled. We have worked with every major brokerage globally. EstateX delivers an edge nobody else has.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80",
     size: "normal" as const,
@@ -384,7 +402,7 @@ const testimonials = [
     name: "Sarah Chen-Park",
     role: "Tech Entrepreneur",
     quote:
-      "As someone who values efficiency, the AI-powered approach was exactly what I needed. Found my dream home in half the usual time. The concierge service is exceptional.",
+      "As someone who values efficiency, the approach was exactly what I needed. Found my dream home in half the usual time. The concierge service is exceptional.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
     size: "normal" as const,
@@ -393,7 +411,7 @@ const testimonials = [
     name: "Robert Harrington",
     role: "Chairman, Harrington Capital",
     quote:
-      "From the first conversation to closing, every detail was handled with absolute precision. The AI predicted market shifts that saved us $2M on our acquisition.",
+      "From the first conversation to closing, every detail was handled with absolute precision. Their market analysis saved us $2M on our acquisition.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
     size: "tall" as const,
@@ -402,7 +420,7 @@ const testimonials = [
     name: "Elena Vasquez",
     role: "Interior Design Director",
     quote:
-      "They don't just find properties — they curate experiences. Every recommendation felt like it was designed specifically for my aesthetic and lifestyle.",
+      "They do not just find properties. They curate experiences. Every recommendation felt like it was designed specifically for my aesthetic and lifestyle.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=200&q=80",
     size: "normal" as const,
@@ -411,7 +429,7 @@ const testimonials = [
     name: "Marcus Thompson",
     role: "Real Estate Investor",
     quote:
-      "In 15 years of luxury real estate investment, I've never seen AI applied this intelligently. The ROI analytics alone are worth their weight in gold.",
+      "In 15 years of luxury real estate investment, I have never seen this level of analytical rigor applied. The ROI insights alone are worth their weight in gold.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
     size: "normal" as const,
@@ -429,7 +447,7 @@ const testimonials = [
     name: "David Kim",
     role: "Venture Capitalist",
     quote:
-      "Speed, precision, discretion — EstateX delivers on all three. The AI concierge responded to my requests at 2am and had three qualified options by morning.",
+      "Speed, precision, discretion. EstateX delivers on all three. The concierge responded to my requests at 2am and had three qualified options by morning.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80",
     size: "tall" as const,
@@ -440,7 +458,7 @@ const stats = [
   { value: 4.2, suffix: "B+", label: "Properties Transacted", icon: BarChart3, prefix: "$" },
   { value: 2847, suffix: "", label: "Happy Clients", icon: Users, prefix: "" },
   { value: 98.6, suffix: "%", label: "Client Satisfaction", icon: Heart, prefix: "" },
-  { value: 24, suffix: "/7", label: "AI Concierge Online", icon: Clock, prefix: "" },
+  { value: 24, suffix: "/7", label: "Concierge Online", icon: Clock, prefix: "" },
 ];
 
 const propertyTypes = ["All", "Penthouse", "Estate", "Villa", "Lodge", "Chalet", "Mansion", "Loft", "Retreat", "Oasis"];
@@ -639,7 +657,7 @@ export default function HomePage() {
         </div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-12 w-full pt-40 pb-32">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -647,29 +665,29 @@ export default function HomePage() {
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-10"
             >
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — AI-Powered Real Estate Agency</span>
+              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — Human Precision. Intelligent Tools.</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-[clamp(2.8rem,7.5vw,7rem)] font-bold leading-[0.9] tracking-tight mb-8 text-white"
+              className="text-[clamp(3rem,8vw,8rem)] font-bold leading-[0.88] tracking-tight mb-8 text-white"
               style={{ fontFamily: "var(--font-italiana)" }}
             >
-              Discover Your Dream
+              Where Expertise Meets
               <br />
-              <span className="text-gradient-gold">Home</span>
+              <span className="text-gradient-gold">Extraordinary Properties</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-lg md:text-xl text-white/65 max-w-xl leading-relaxed mb-14"
+              className="text-lg md:text-xl text-white/65 max-w-2xl leading-relaxed mb-14"
             >
-              Premium properties, intelligent guidance, and a concierge that
-              understands your lifestyle — all powered by artificial intelligence.
+              Three decades of luxury market expertise, enhanced by intelligent tools.
+              Every property, every transaction, every detail — elevated beyond expectation.
             </motion.p>
 
             <motion.div
@@ -678,11 +696,11 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <a href="#contact" className="btn-gold">
-                <span><Calendar className="w-4 h-4" /> Book a Consultation <ArrowRight className="w-4 h-4" /></span>
+              <a href="#properties" className="btn-gold">
+                <span><Calendar className="w-4 h-4" /> Explore Collection <ArrowRight className="w-4 h-4" /></span>
               </a>
-              <a href="#concierge" className="btn-outline-dark !border-white/25 !text-white hover:!border-gold hover:!text-gold hover:!bg-white/5">
-                <Play className="w-4 h-4" /> Start AI Chat
+              <a href="#contact" className="btn-outline-dark !border-white/25 !text-white hover:!border-gold hover:!text-gold hover:!bg-white/5">
+                <Play className="w-4 h-4" /> Book Private Viewing
               </a>
             </motion.div>
 
@@ -747,12 +765,12 @@ export default function HomePage() {
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeLeft">
                 <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">What We Do</span>
-                <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
+                <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
                   Real Estate,
                   <br />Reimagined.
                 </h2>
                 <p className="text-lg text-slate-mid leading-relaxed max-w-lg mb-10">
-                  Three decades of luxury market expertise, fused with cutting-edge AI.
+                  Three decades of luxury market expertise, fused with cutting-edge tools.
                   Every property, every transaction, every detail — elevated beyond expectation.
                 </p>
                 <div className="flex gap-4">
@@ -762,18 +780,18 @@ export default function HomePage() {
               </Reveal>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {[
                 {
                   icon: Search, num: "01", title: "Buy", headline: "Find Your Perfect Address",
                   desc: "AI-curated property matching, off-market access, and neighborhood intelligence — all in one seamless experience.",
-                  features: ["Off-Market Access", "AI Price Analytics", "Lifestyle Matching"],
+                  features: ["Off-Market Access", "Price Analytics", "Lifestyle Matching"],
                   img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
                 },
                 {
                   icon: TrendingUp, num: "02", title: "Sell", headline: "Maximize Every Square Foot",
                   desc: "Dynamic pricing algorithms, professional staging guidance, and access to our global network of qualified luxury buyers.",
-                  features: ["AI Valuation Engine", "Global Buyer Network", "Premium Marketing"],
+                  features: ["Valuation Engine", "Global Buyer Network", "Premium Marketing"],
                   img: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
                 },
                 {
@@ -823,11 +841,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-16">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Portfolio</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
               Signature Listings
             </h2>
             <p className="text-lg text-white/40 max-w-2xl mx-auto">
-              Each property is hand-selected, AI-verified for value, and presented with the detail it deserves.
+              Each property is hand-selected and presented with the detail it deserves.
             </p>
           </Reveal>
 
@@ -968,6 +986,57 @@ export default function HomePage() {
         </div>
       </Reveal>
 
+      {/* ═══ SOLD PROPERTIES CAROUSEL ═══ */}
+      <Reveal className="py-24 dark-section-bg relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+        </div>
+
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
+          <Reveal className="mb-12">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div>
+                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Track Record</span>
+                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+                  Recently Closed
+                </h2>
+              </div>
+              <p className="text-white/40 max-w-md text-[15px] leading-relaxed">
+                Every transaction represents a family who trusted us with their most important asset.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="sold-carousel">
+            {[...soldProperties, ...soldProperties].map((s, i) => (
+              <motion.div
+                key={`${s.id}-${i}`}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (i % soldProperties.length) * 0.05, ease }}
+                className="sold-card"
+              >
+                <div className="relative h-[160px] overflow-hidden">
+                  <img src={s.image} alt={s.location} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
+                  <div className="absolute top-3 right-3">
+                    <span className="px-3 py-1 rounded-full bg-gold text-navy text-[9px] font-bold uppercase tracking-wider">Sold</span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="text-lg font-bold text-gradient-gold mb-1" style={{ fontFamily: "var(--font-italiana)" }}>{s.price}</div>
+                  <div className="flex items-center gap-1.5 text-white/40 text-[11px]">
+                    <MapPin className="w-3 h-3" /> {s.location}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
       {/* ═══ TESTIMONIALS + AI CONCIERGE (Merged Bento) ═══ */}
       <div id="concierge">
       <Reveal className="section-xl dark-section-bg relative">
@@ -985,7 +1054,7 @@ export default function HomePage() {
               <Reveal className="mb-12">
                 <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Testimonials</span>
                 <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight mb-4 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
-                  What People Say
+                  Trusted by the Discerning
                 </h2>
                 <p className="text-lg text-white/40 max-w-lg">
                   Our clients expect the extraordinary. Here&apos;s what they have to say.
@@ -1030,7 +1099,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* ─── RIGHT: AI Concierge ─── */}
+            {/* ─── RIGHT: Intelligence Card ─── */}
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeRight">
                 <div className="glass-card-dark p-8 relative overflow-hidden group">
@@ -1045,11 +1114,11 @@ export default function HomePage() {
                       The Intelligence
                     </h3>
                     <p className="text-[13px] text-white/40 leading-relaxed mb-6">
-                      Your AI concierge. Available 24/7. Ask anything — from market trends to scheduling a private viewing.
+                      Our advisors combine decades of market expertise with intelligent tools to deliver results others cannot.
                     </p>
 
                     <div className="flex flex-wrap gap-2 mb-8">
-                      {["Natural Language", "Market Predictions", "Instant Scheduling"].map((f) => (
+                      {["Market Predictions", "Price Analytics", "Lifestyle Matching", "Instant Scheduling"].map((f) => (
                         <span key={f} className="px-4 py-2 rounded-full bg-white/5 border border-white/8 text-[11px] font-semibold text-white/50 flex items-center gap-1.5">
                           <CheckCircle2 className="w-3 h-3 text-gold" /> {f}
                         </span>
@@ -1096,7 +1165,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {[
               { icon: Shield, label: "Licensed & Bonded", sub: "All 50 States" },
-              { icon: Award, label: "#1 AI Brokerage", sub: "2024 — 2026" },
+              { icon: Award, label: "#1 Luxury Brokerage", sub: "2024 — 2026" },
               { icon: Globe, label: "Global Network", sub: "40+ Countries" },
               { icon: Lock, label: "Bank-Level Security", sub: "SOC 2 Certified" },
             ].map((t) => (
@@ -1151,7 +1220,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex gap-4">
-                <a href="#concierge" className="btn-gold text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with AI</span></a>
+                <a href="#concierge" className="btn-gold text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with Us</span></a>
                 <a href="#" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
               </div>
             </Reveal>
@@ -1162,7 +1231,7 @@ export default function HomePage() {
                   Book a Consultation
                 </h3>
                 <p className="text-[13px] text-white/35 mb-8">Fill in your details and we&apos;ll get back to you within 1 hour.</p>
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid md:grid-cols-2 gap-4">
                     <input type="text" placeholder="First Name" className="input-dark" />
                     <input type="text" placeholder="Last Name" className="input-dark" />
@@ -1201,7 +1270,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="text-[13px] text-white/35 leading-relaxed max-w-xs">
-                EstateX — AI-Powered Real Estate Agency. Redefining luxury real estate through artificial intelligence and white-glove service.
+                EstateX — Human Precision. Intelligent Tools. Redefining luxury real estate through expertise and innovation.
               </p>
             </div>
             {[

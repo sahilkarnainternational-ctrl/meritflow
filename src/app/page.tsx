@@ -606,7 +606,7 @@ export default function HomePage() {
                 <Building2 className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight text-black" style={{ fontFamily: "var(--font-italiana)" }}>
-                Estate<span className="text-white">X</span>
+                EstateX
               </span>
             </a>
 
@@ -623,7 +623,7 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
-              <a href="#contact" className="btn-primary text-[11px] py-3 px-6">
+              <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-primary text-[11px] py-3 px-6">
                 <span><Calendar className="w-4 h-4" /> Book Consultation</span>
               </a>
             </div>
@@ -650,7 +650,7 @@ export default function HomePage() {
                     {item}
                   </a>
                 ))}
-                <a href="#contact" className="btn-primary text-[11px] py-3 px-6 w-full justify-center mt-4">
+                <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-primary text-[11px] py-3 px-6 w-full justify-center mt-4">
                   <span><Calendar className="w-4 h-4" /> Book Consultation</span>
                 </a>
               </div>
@@ -1560,7 +1560,7 @@ export default function HomePage() {
                   <Building2 className="w-5 h-5 text-black" />
                 </div>
                 <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
-                  Estate<span className="text-white">X</span>
+                  EstateX
                 </span>
               </div>
               <p className="text-[13px] text-white/35 leading-relaxed max-w-xs">

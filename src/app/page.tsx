@@ -311,7 +311,7 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center">
                 <Building2 className="w-5 h-5 text-gold" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+              <span className="text-xl font-bold tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
                 Estate<span className="text-gold">AI</span>
               </span>
             </a>
@@ -397,11 +397,11 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
               className="text-[clamp(2.8rem,7.5vw,7rem)] font-bold leading-[0.9] tracking-tight mb-8 text-white"
-              style={{ fontFamily: "var(--font-playfair)" }}
+              style={{ fontFamily: "var(--font-italiana)" }}
             >
-              Where Vision
+              Discover Your Dream
               <br />
-              Meets <span className="text-gradient-gold">Address</span>
+              <span className="text-gradient-gold">Home</span>
             </motion.h1>
 
             <motion.p
@@ -463,7 +463,7 @@ export default function HomePage() {
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-cream to-transparent z-10" />
           <div className="flex animate-marquee whitespace-nowrap">
             {[...marqueeLogos, ...marqueeLogos].map((logo, i) => (
-              <span key={i} className="mx-14 text-xl md:text-2xl font-bold text-navy/10 select-none" style={{ fontFamily: "var(--font-playfair)" }}>
+              <span key={i} className="mx-14 text-xl md:text-2xl font-bold text-navy/10 select-none" style={{ fontFamily: "var(--font-italiana)" }}>
                 {logo}
               </span>
             ))}
@@ -481,7 +481,7 @@ export default function HomePage() {
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeLeft">
                 <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">What We Do</span>
-                <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
                   Real Estate,
                   <br />Reimagined.
                 </h2>
@@ -528,7 +528,7 @@ export default function HomePage() {
                           <ArrowUpRight className="w-5 h-5 text-slate-light group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                         </div>
                         <p className="text-[11px] uppercase tracking-[0.2em] text-slate-light font-semibold mb-2">{s.num} — {s.title}</p>
-                        <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-navy" style={{ fontFamily: "var(--font-playfair)" }}>{s.headline}</h4>
+                        <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>{s.headline}</h4>
                         <p className="text-slate-mid leading-relaxed mb-6 text-[15px]">{s.desc}</p>
                         <div className="flex flex-wrap gap-2">
                           {s.features.map((f) => (
@@ -553,7 +553,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
           <Reveal className="text-center mb-24">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Portfolio</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
               Signature Listings
             </h2>
             <p className="text-lg text-slate-mid max-w-2xl mx-auto">
@@ -592,7 +592,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-2 text-slate-mid text-[11px] uppercase tracking-wider mb-2 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-gold" /> {p.location.split(",")[0]}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-playfair)" }}>{p.title}</h3>
+                  <h3 className="text-xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
                   <div className="flex items-center gap-4 text-[12px] text-slate-mid mb-4">
                     <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5" /> {p.beds} Beds</span>
                     <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5" /> {p.baths} Baths</span>
@@ -621,7 +621,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-24">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Intelligence</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
               Your AI Concierge
             </h2>
             <p className="text-lg text-white/50 max-w-2xl mx-auto">
@@ -638,7 +638,7 @@ export default function HomePage() {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-8">
                       <Sparkles className="w-7 h-7 text-navy" />
                     </div>
-                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white" style={{ fontFamily: "var(--font-playfair)" }}>
+                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                       Conversations<br />That Move You
                     </h3>
                     <p className="text-white/50 leading-relaxed max-w-lg text-lg">
@@ -659,7 +659,7 @@ export default function HomePage() {
             <Reveal variant="fadeUp" amount={0.15}>
               <div className="p-8 rounded-3xl border border-white/10 bg-white/[0.03] h-full">
                 <Zap className="w-8 h-8 text-gold mb-5" />
-                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-playfair)" }}>Instant Responses</h4>
+                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-italiana)" }}>Instant Responses</h4>
                 <p className="text-[14px] text-white/40 leading-relaxed">Get answers in under two seconds. Property questions, pricing queries, market insights — all instant.</p>
               </div>
             </Reveal>
@@ -667,7 +667,7 @@ export default function HomePage() {
             <Reveal variant="fadeUp" amount={0.15}>
               <div className="p-8 rounded-3xl border border-white/10 bg-white/[0.03] h-full">
                 <Shield className="w-8 h-8 text-gold mb-5" />
-                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-playfair)" }}>Verified & Secure</h4>
+                <h4 className="text-xl font-bold mb-3 text-white" style={{ fontFamily: "var(--font-italiana)" }}>Verified & Secure</h4>
                 <p className="text-[14px] text-white/40 leading-relaxed">Every listing AI-verified. Bank-level encryption. Your data stays completely private.</p>
               </div>
             </Reveal>
@@ -688,7 +688,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-24">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Testimonials</span>
-            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-[clamp(2.2rem,4.5vw,4.2rem)] font-bold leading-[1.08] tracking-tight mb-6 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
               Trusted by the Discerning
             </h2>
             <p className="text-lg text-slate-mid max-w-2xl mx-auto">
@@ -759,7 +759,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-24">
             <Reveal variant="fadeLeft">
               <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Get in Touch</span>
-              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
                 Let&apos;s Discuss Your<br />Next Move
               </h2>
               <p className="text-lg text-slate-mid leading-relaxed mb-14 max-w-md">
@@ -792,7 +792,7 @@ export default function HomePage() {
 
             <Reveal variant="fadeRight">
               <div className="p-10 md:p-12 rounded-3xl bg-cream border border-black/5">
-                <h3 className="text-2xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3 className="text-2xl font-bold mb-3 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
                   Book a Consultation
                 </h3>
                 <p className="text-[13px] text-slate-mid mb-8">Fill in your details and we&apos;ll get back to you within 1 hour.</p>
@@ -830,7 +830,7 @@ export default function HomePage() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
                   <Building2 className="w-5 h-5 text-navy" />
                 </div>
-                <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-playfair)" }}>
+                <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
                   Estate<span className="text-gold">AI</span>
                 </span>
               </div>
@@ -901,7 +901,7 @@ export default function HomePage() {
                   <div className="text-[11px] text-white/60 uppercase tracking-[0.15em] font-semibold mb-2 flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5" /> {selectedProperty.location}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "var(--font-playfair)" }}>{selectedProperty.title}</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "var(--font-italiana)" }}>{selectedProperty.title}</h2>
                 </div>
               </div>
 
@@ -935,7 +935,7 @@ export default function HomePage() {
 
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                   <div className="md:col-span-2">
-                    <h3 className="text-xl font-bold text-navy mb-4" style={{ fontFamily: "var(--font-playfair)" }}>About This Property</h3>
+                    <h3 className="text-xl font-bold text-navy mb-4" style={{ fontFamily: "var(--font-italiana)" }}>About This Property</h3>
                     <p className="text-[15px] text-slate-mid leading-relaxed mb-6">{selectedProperty.description}</p>
                     <div className="flex items-center gap-3 mb-4">
                       <Briefcase className="w-4 h-4 text-gold" />
@@ -951,7 +951,7 @@ export default function HomePage() {
                       <div className="text-[11px] text-slate-mid mt-1">{selectedProperty.agentRole}</div>
                     </div>
                     <div className="text-center mb-4">
-                      <div className="text-3xl font-bold text-gradient-gold" style={{ fontFamily: "var(--font-playfair)" }}>{selectedProperty.price}</div>
+                      <div className="text-3xl font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>{selectedProperty.price}</div>
                     </div>
                     <a href="#contact" className="btn-gold text-[11px] w-full justify-center" onClick={() => setSelectedProperty(null)}>
                       <span><Calendar className="w-4 h-4" /> Schedule Viewing</span>

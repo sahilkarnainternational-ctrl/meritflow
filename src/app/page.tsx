@@ -665,7 +665,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-10"
             >
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — Human Precision. Intelligent Tools.</span>
+              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — Discover Properties That Match Your Vision</span>
             </motion.div>
 
             <motion.h1
@@ -833,16 +833,19 @@ export default function HomePage() {
       </Reveal>
       </div>
 
+      <div className="section-divider" />
+
       {/* ═══ PROPERTIES ═══ */}
       <Reveal id="properties" className="section-xl dark-section-bg relative">
+        <div className="grain-overlay" />
         <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80')" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-16">
             <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Portfolio</span>
-            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
-              Signature Listings
+            <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+              Signature Collection
             </h2>
             <p className="text-lg text-white/40 max-w-2xl mx-auto">
               Each property is hand-selected and presented with the detail it deserves.
@@ -988,6 +991,7 @@ export default function HomePage() {
 
       {/* ═══ SOLD PROPERTIES CAROUSEL ═══ */}
       <Reveal className="py-24 dark-section-bg relative overflow-hidden">
+        <div className="grain-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
@@ -1037,9 +1041,12 @@ export default function HomePage() {
         </div>
       </Reveal>
 
+      <div className="section-divider" />
+
       {/* ═══ TESTIMONIALS + AI CONCIERGE (Merged Bento) ═══ */}
       <div id="concierge">
       <Reveal className="section-xl dark-section-bg relative">
+        <div className="grain-overlay" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
@@ -1150,6 +1157,38 @@ export default function HomePage() {
                         <Phone className="w-4 h-4" /> Schedule Call
                       </a>
                     </div>
+
+                    <div className="mt-8 pt-8 border-t border-white/5">
+                      <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em] mb-4">Our Track Record</h4>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="stat-mini">
+                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>2,400+</div>
+                          <div className="text-[10px] text-white/35 mt-0.5">Properties Sold</div>
+                        </div>
+                        <div className="stat-mini">
+                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>$4.8B+</div>
+                          <div className="text-[10px] text-white/35 mt-0.5">Total Value</div>
+                        </div>
+                        <div className="stat-mini">
+                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>98%</div>
+                          <div className="text-[10px] text-white/35 mt-0.5">Client Satisfaction</div>
+                        </div>
+                        <div className="stat-mini">
+                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>15+</div>
+                          <div className="text-[10px] text-white/35 mt-0.5">Years Experience</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 pt-6 border-t border-white/5">
+                      <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em] mb-4">Featured In</h4>
+                      <div className="flex flex-wrap items-center gap-6">
+                        <span className="text-[14px] font-bold text-white/15" style={{ fontFamily: "var(--font-italiana)" }}>WSJ</span>
+                        <span className="text-[14px] font-bold text-white/15" style={{ fontFamily: "var(--font-italiana)" }}>Forbes</span>
+                        <span className="text-[14px] font-bold text-white/15" style={{ fontFamily: "var(--font-italiana)" }}>Bloomberg</span>
+                        <span className="text-[14px] font-bold text-white/15" style={{ fontFamily: "var(--font-italiana)" }}>Robb Report</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -1159,32 +1198,60 @@ export default function HomePage() {
       </Reveal>
       </div>
 
-      {/* ═══ TRUST SIGNALS ═══ */}
-      <Reveal className="py-20 bg-white border-y border-black/5">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {[
-              { icon: Shield, label: "Licensed & Bonded", sub: "All 50 States" },
-              { icon: Award, label: "#1 Luxury Brokerage", sub: "2024 — 2026" },
-              { icon: Globe, label: "Global Network", sub: "40+ Countries" },
-              { icon: Lock, label: "Bank-Level Security", sub: "SOC 2 Certified" },
-            ].map((t) => (
-              <Reveal key={t.label} variant="scaleUp" amount={0.3}>
-                <div className="text-center group">
-                  <div className="w-14 h-14 rounded-2xl bg-gold-dim border border-gold/15 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
-                    <t.icon className="w-6 h-6 text-gold group-hover:text-navy transition-colors duration-500" />
+      {/* ═══ LICENSED & BONDED ═══ */}
+      <Reveal className="py-24 dark-section-bg relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center opacity-[0.08]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80')" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
+        </div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full bg-gold/[0.04] blur-[180px]" />
+        </div>
+
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
+          <Reveal variant="fadeUp">
+            <div className="license-card">
+              <div className="text-center mb-10">
+                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-4">Credentials</span>
+                <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+                  Licensed & Bonded Luxury Brokerage
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                {[
+                  { icon: Shield, label: "Licensed in All 50 States", desc: "Full regulatory compliance" },
+                  { icon: Lock, label: "Bonded & Insured", desc: "Maximum transaction protection" },
+                  { icon: BarChart3, label: "Fiduciary Standard", desc: "Your interests first, always" },
+                  { icon: Search, label: "Privacy Guaranteed", desc: "Discretion by design" },
+                ].map((pillar) => (
+                  <div key={pillar.label} className="text-center group">
+                    <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/10 group-hover:border-gold/20 transition-all duration-500">
+                      <pillar.icon className="w-5 h-5 text-gold" />
+                    </div>
+                    <div className="font-bold text-[13px] text-white mb-1">{pillar.label}</div>
+                    <div className="text-[11px] text-white/30">{pillar.desc}</div>
                   </div>
-                  <div className="font-bold text-[13px] text-navy mb-1">{t.label}</div>
-                  <div className="text-[11px] text-slate-mid uppercase tracking-wider">{t.sub}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                ))}
+              </div>
+
+              <div className="section-divider mb-10" />
+
+              <div className="text-center">
+                <p className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gradient-gold tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
+                  Trusted by $4.8B+ in transactions
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Reveal>
 
+      <div className="section-divider" />
+
       {/* ═══ CONTACT & BOOKING ═══ */}
       <Reveal id="contact" className="section-xl dark-section-bg relative">
+        <div className="grain-overlay" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
@@ -1270,7 +1337,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="text-[13px] text-white/35 leading-relaxed max-w-xs">
-                EstateX — Human Precision. Intelligent Tools. Redefining luxury real estate through expertise and innovation.
+                EstateX — Discover Properties That Match Your Vision. Redefining luxury real estate through expertise and innovation.
               </p>
             </div>
             {[

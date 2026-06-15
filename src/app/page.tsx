@@ -720,6 +720,9 @@ export default function HomePage() {
               <a href="#contact" className="btn-outline-dark !border-white/25 !text-white hover:!border-gold hover:!text-gold hover:!bg-white/5">
                 <Play className="w-4 h-4" /> Book Private Viewing
               </a>
+              <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book">
+                <Calendar className="w-4 h-4" /> Book a Private Consultation
+              </a>
             </motion.div>
 
             <motion.div
@@ -886,6 +889,30 @@ export default function HomePage() {
       </Reveal>
 
       <div className="section-divider" />
+
+      {/* ═══ QUOTE BANNER — Sarah Chen-Park ═══ */}
+      <Reveal className="quote-banner py-28 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+        </div>
+        <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
+          <FadeIn>
+            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
+              &ldquo;We weren&apos;t just looking for a house. We were looking for a home that reflected who we are. EstateX understood that from the first conversation.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Sarah Chen-Park" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-[13px] text-white">Sarah Chen-Park</div>
+                <div className="text-[11px] text-white/30">San Francisco · Penthouse Purchase</div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </Reveal>
 
       {/* ═══ PROPERTIES ═══ */}
       <Reveal id="properties" className="section-xl dark-section-bg relative">
@@ -1091,6 +1118,30 @@ export default function HomePage() {
         </div>
       </Reveal>
 
+      {/* ═══ QUOTE BANNER — Robert & Elena Harrington ═══ */}
+      <Reveal className="quote-banner py-28 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+        </div>
+        <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
+          <FadeIn>
+            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
+              &ldquo;The off-market access alone was worth it. We saw properties we didn&apos;t know existed. EstateX&apos;s network is unmatched in this industry.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Robert & Elena Harrington" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-[13px] text-white">Robert & Elena Harrington</div>
+                <div className="text-[11px] text-white/30">New York · Estate Purchase</div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </Reveal>
+
       {/* ═══ SOLD PROPERTIES CAROUSEL ═══ */}
       <Reveal className="py-24 dark-section-bg relative overflow-hidden">
         <div className="grain-overlay" />
@@ -1140,6 +1191,30 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </Reveal>
+
+      {/* ═══ QUOTE BANNER — Marcus Thompson ═══ */}
+      <Reveal className="quote-banner py-28 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+        </div>
+        <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
+          <FadeIn>
+            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
+              &ldquo;From the first meeting to handing us the keys, every detail was handled with care. This is how luxury real estate should be.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Marcus Thompson" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-[13px] text-white">Marcus Thompson</div>
+                <div className="text-[11px] text-white/30">Miami · Waterfront Villa</div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </Reveal>
 
@@ -1297,6 +1372,9 @@ export default function HomePage() {
                       <a href="#contact" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px] w-full justify-center">
                         <Calendar className="w-4 h-4" /> Schedule a Private Consultation
                       </a>
+                      <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book w-full justify-center text-[11px]">
+                        <Calendar className="w-4 h-4" /> Book a Private Consultation
+                      </a>
                     </div>
 
                     <div className="pt-8 border-t border-white/5">
@@ -1427,9 +1505,12 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <a href="#concierge" className="btn-gold text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with Us</span></a>
                 <a href="#" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
+                <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book text-[11px]">
+                  <Calendar className="w-4 h-4" /> Book a Private Consultation
+                </a>
               </div>
             </Reveal>
 
@@ -1458,6 +1539,11 @@ export default function HomePage() {
                     <span><Send className="w-4 h-4" /> Book a Consultation</span>
                   </button>
                 </form>
+                <div className="mt-4">
+                  <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book w-full justify-center text-[11px]">
+                    <Calendar className="w-4 h-4" /> Book a Private Consultation
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -1501,7 +1587,8 @@ export default function HomePage() {
           <div className="divider-gold mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[12px] text-white/25">&copy; 2026 EstateX. All rights reserved.</p>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
+              <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="text-[12px] text-gold hover:text-white transition-colors font-semibold">Book Now</a>
               {["LinkedIn", "Twitter", "Instagram"].map((s) => (
                 <a key={s} href="#" className="text-[12px] text-white/25 hover:text-gold transition-colors">{s}</a>
               ))}

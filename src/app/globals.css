@@ -407,9 +407,32 @@ body {
 }
 
 /* ─── Button Hover Scale ─── */
-.btn-gold, .btn-outline, .btn-outline-dark {
+.btn-gold, .btn-outline, .btn-outline-dark, .btn-book {
   transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
 }
 .btn-gold:hover, .btn-outline:hover, .btn-outline-dark:hover {
   transform: translateY(-2px) scale(1.02);
+}
+
+/* ─── Book Here Button ─── */
+.btn-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-book:hover {
+  background: #2a2a2a;
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }

@@ -690,7 +690,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-[clamp(3rem,8vw,8rem)] font-bold leading-[0.88] tracking-tight mb-8 text-white"
+              className="text-[clamp(3rem,8vw,8rem)] font-bold leading-[0.92] tracking-tight mb-8 text-white"
               style={{ fontFamily: "var(--font-italiana)" }}
             >
               Where Expertise Meets
@@ -778,7 +778,7 @@ export default function HomePage() {
       {/* ═══ SERVICES — Real Estate Reimagined ═══ */}
       <div ref={servicesRef} id="services">
       <Reveal className="section-xl relative overflow-hidden">
-        <motion.div className="absolute inset-0 opacity-[0.05]" style={{ y: servicesBgY }}>
+        <motion.div className="absolute inset-0 opacity-[0.12]" style={{ y: servicesBgY }}>
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80')" }} />
         </motion.div>
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
@@ -790,7 +790,7 @@ export default function HomePage() {
                   Real Estate,
                   <br />Reimagined.
                 </h2>
-                <p className="text-lg text-slate-mid leading-relaxed max-w-lg mb-10">
+                <p className="text-lg text-slate-mid leading-relaxed max-w-lg mb-12">
                   Three decades of luxury market expertise, fused with cutting-edge tools.
                   Every property, every transaction, every detail — elevated beyond expectation.
                 </p>
@@ -864,10 +864,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
           <FadeIn className="text-center mb-16">
             <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Our Approach</span>
-            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-6" style={{ fontFamily: "var(--font-italiana)" }}>
               A Refined Process
             </h2>
-            <p className="text-lg text-white/40 max-w-xl mx-auto">
+            <p className="text-lg text-white/40 max-w-xl mx-auto mb-6">
               Three deliberate steps from discovery to your dream property.
             </p>
           </FadeIn>
@@ -1038,7 +1038,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-2 text-white/40 text-[11px] uppercase tracking-wider mb-2 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-white" /> {p.location.split(",")[0]}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
+                  <h3 className="text-xl font-bold mb-4 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
                   <div className="flex items-center gap-4 text-[12px] text-white/40 mb-4">
                     <span className="flex items-center gap-1"><Bed className="w-3.5 h-3.5" /> {p.beds} Beds</span>
                     <span className="flex items-center gap-1"><Bath className="w-3.5 h-3.5" /> {p.baths} Baths</span>
@@ -1078,10 +1078,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <FadeIn className="text-center mb-16">
             <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">The Difference</span>
-            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+            <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-6" style={{ fontFamily: "var(--font-italiana)" }}>
               Why Discerning Clients Choose EstateX
             </h2>
-            <p className="text-lg text-white/40 max-w-2xl mx-auto">
+            <p className="text-lg text-white/40 max-w-2xl mx-auto mb-6">
               We deliver what others cannot — access, intelligence, and an unwavering commitment to excellence.
             </p>
           </FadeIn>
@@ -1155,11 +1155,11 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
                 <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Track Record</span>
-                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
                   Recently Closed
                 </h2>
               </div>
-              <p className="text-white/40 max-w-md text-[15px] leading-relaxed">
+              <p className="text-white/40 max-w-md text-[15px] leading-relaxed mb-4">
                 Every transaction represents a family who trusted us with their most important asset.
               </p>
             </div>
@@ -1261,10 +1261,10 @@ export default function HomePage() {
             <div>
               <Reveal className="mb-12">
                 <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Testimonials</span>
-                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight mb-4 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+                <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                   Trusted by the Discerning
                 </h2>
-                <p className="text-lg text-white/40 max-w-lg">
+                <p className="text-lg text-white/40 max-w-lg mb-6">
                   Our clients expect the extraordinary. Here&apos;s what they have to say.
                 </p>
               </Reveal>
@@ -1310,7 +1310,7 @@ export default function HomePage() {
             {/* ─── RIGHT: Intelligence Card ─── */}
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeRight">
-                <div className="glass-card-dark p-8 relative overflow-hidden group">
+                <div className="glass-card-dark p-8 md:p-10 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-60 h-60 bg-white/[0.08] rounded-full blur-[100px] group-hover:bg-white/[0.12] transition-all duration-700" />
 
                   <div className="relative z-10">
@@ -1432,12 +1432,12 @@ export default function HomePage() {
             <div className="license-card">
               <div className="text-center mb-10">
                 <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-4">Credentials</span>
-                <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
+                <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white mb-6" style={{ fontFamily: "var(--font-italiana)" }}>
                   Licensed & Bonded Luxury Brokerage
                 </h2>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 {[
                   { icon: Shield, label: "Licensed in All 50 States", desc: "Full regulatory compliance" },
                   { icon: Lock, label: "Bonded & Insured", desc: "Maximum transaction protection" },
@@ -1480,7 +1480,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-24">
             <Reveal variant="fadeLeft">
               <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Get in Touch</span>
-              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
+              <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-10 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                 Let&apos;s Discuss Your<br />Next Move
               </h2>
               <p className="text-lg text-white/40 leading-relaxed mb-14 max-w-md">

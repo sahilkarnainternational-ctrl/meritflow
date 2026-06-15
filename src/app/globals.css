@@ -255,6 +255,22 @@ body {
 .section-xl { padding: 8rem 1.5rem; }
 @media(min-width:768px){ .section-lg{padding:8rem 2rem} .section-xl{padding:10rem 2rem} }
 @media(min-width:1024px){ .section-lg{padding:9rem 2rem} .section-xl{padding:12rem 2rem} }
+.section-spacing { padding-top: 6rem; padding-bottom: 6rem; }
+.section-spacing-lg { padding-top: 8rem; padding-bottom: 8rem; }
+
+/* ─── Heading Typography ─── */
+h1, .text-hero {
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+h2, .text-section {
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+h3, .text-subsection {
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
 
 /* ─── Gradient Text ─── */
 .text-gradient-white {
@@ -430,6 +446,14 @@ body {
   color: rgba(255,255,255,0.04);
   line-height: 1;
   pointer-events: none;
+}
+
+/* ─── Services Background ─── */
+.services-bg {
+  background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
 }
 
 /* ─── Approach Step ─── */

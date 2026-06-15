@@ -676,16 +676,6 @@ export default function HomePage() {
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-12 w-full pt-40 pb-32">
           <div className="max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-10"
-            >
-              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — Discover Properties That Match Your Vision</span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}

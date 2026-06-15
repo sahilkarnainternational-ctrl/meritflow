@@ -45,20 +45,20 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #ffffff;
   padding: 1rem 2.5rem;
   border-radius: 100px;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
-  border: none;
+  border: 1px solid rgba(255,255,255,0.15);
   cursor: pointer;
 }
 .btn-primary:hover {
-  background: #f0f0f0;
+  background: #1a1a1a;
   transform: scale(1.03);
-  box-shadow: 0 8px 30px rgba(255,255,255,0.15);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 .btn-outline {
@@ -80,35 +80,73 @@ body {
 }
 .btn-outline:hover { border-color: #ffffff; color: #ffffff; }
 
+/* ─── Glass Button (Liquid Glass Sphere) ─── */
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.6s ease;
+}
+.btn-glass:hover::before {
+  left: 100%;
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,255,255,0.08);
+}
+
 /* ─── Filter Pills (Liquid Glass) ─── */
 .filter-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.625rem 1.5rem;
   border-radius: 100px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
-  color: rgba(255,255,255,0.6);
+  color: #86868b;
   white-space: nowrap;
   user-select: none;
 }
-.filter-pill:hover { border-color: rgba(255,255,255,0.4); color: #ffffff; }
+.filter-pill:hover { border-color: rgba(255,255,255,0.3); color: #ffffff; }
 .filter-pill.active {
-  background: rgba(255,255,255,0.15);
+  background: #000000;
   color: #ffffff;
-  border-color: rgba(255,255,255,0.3);
+  border-color: #ffffff;
 }
 .filter-pill-white.active {
-  background: linear-gradient(135deg, #ffffff, #ffffff);
-  color: #1a1a1a;
-  border-color: transparent;
+  background: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 /* ─── Glass Card Dark ─── */
@@ -220,10 +258,41 @@ body {
 
 /* ─── Gradient Text ─── */
 .text-gradient-white {
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #9a7a45 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #cccccc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ─── Property Card Content ─── */
+.property-card-content {
+  padding: 1.25rem 1.5rem;
+}
+.property-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.property-location {
+  font-size: 0.8rem;
+  color: #86868b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Property Grid ─── */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .property-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .property-grid { grid-template-columns: 1fr; }
 }
 
 /* ─── Image zoom ─── */
@@ -396,7 +465,7 @@ body {
 }
 
 /* ─── Button Hover Scale ─── */
-.btn-outline, .btn-outline-dark, .btn-book {
+.btn-outline, .btn-outline-dark, .btn-book, .btn-glass {
   transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
 }
 .btn-outline:hover, .btn-outline-dark:hover {
@@ -408,20 +477,20 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #1a1a1a;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   padding: 1rem 2.5rem;
   border-radius: 100px;
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
   text-decoration: none;
   cursor: pointer;
 }
 .btn-book:hover {
-  background: #2a2a2a;
+  background: #1a1a1a;
   transform: scale(1.03);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }

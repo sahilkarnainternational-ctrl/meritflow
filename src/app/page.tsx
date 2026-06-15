@@ -366,7 +366,7 @@ const properties = [
     beds: 5,
     baths: 6,
     sqft: "8,100",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
     tag: "Desert Modern",
     owner: "Sonoran Holdings LLC",
     agent: "Marcus Reid",
@@ -717,7 +717,7 @@ export default function HomePage() {
               <a href="#properties" className="btn-primary">
                 <span><Calendar className="w-4 h-4" /> Explore Collection <ArrowRight className="w-4 h-4" /></span>
               </a>
-              <a href="#contact" className="btn-outline-dark !border-white/25 !text-white hover:!border-white hover:!text-white hover:!bg-white/5">
+              <a href="#contact" className="btn-glass">
                 <Play className="w-4 h-4" /> Book Private Viewing
               </a>
               <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book">
@@ -807,7 +807,7 @@ export default function HomePage() {
                   icon: Search, num: "01", title: "Buy", headline: "Find Your Perfect Address",
                   desc: "AI-curated property matching, off-market access, and neighborhood intelligence — all in one seamless experience.",
                   features: ["Off-Market Access", "Price Analytics", "Lifestyle Matching"],
-                  img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
+                  img: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
                 },
                 {
                   icon: TrendingUp, num: "02", title: "Sell", headline: "Maximize Every Square Foot",

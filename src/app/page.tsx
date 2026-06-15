@@ -447,7 +447,7 @@ const testimonials = [
     name: "Marcus Thompson",
     role: "Real Estate Investor",
     quote:
-      "In 15 years of luxury real estate investment, I have never seen this level of analytical rigor applied. The ROI insights alone are worth their weight in gold.",
+      "In 15 years of luxury real estate investment, I have never seen this level of analytical rigor applied. The ROI insights alone are worth their weight.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
     size: "normal" as const,
@@ -602,11 +602,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             <a href="#" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center">
-                <Building2 className="w-5 h-5 text-gold" />
+              <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center">
+                <Building2 className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
-                Estate<span className="text-gold">X</span>
+              <span className="text-xl font-bold tracking-tight text-black" style={{ fontFamily: "var(--font-italiana)" }}>
+                Estate<span className="text-white">X</span>
               </span>
             </a>
 
@@ -615,7 +615,7 @@ export default function HomePage() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-[12px] font-semibold text-slate-mid hover:text-navy transition-colors tracking-[0.12em] uppercase"
+                  className="text-[12px] font-semibold text-slate-mid hover:text-black transition-colors tracking-[0.12em] uppercase"
                 >
                   {item}
                 </a>
@@ -623,15 +623,15 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
-              <a href="#contact" className="btn-gold text-[11px] py-3 px-6">
+              <a href="#contact" className="btn-primary text-[11px] py-3 px-6">
                 <span><Calendar className="w-4 h-4" /> Book Consultation</span>
               </a>
             </div>
 
             <button onClick={() => setMobileMenu(!mobileMenu)} className="lg:hidden p-2">
-              <div className={`w-6 h-0.5 bg-navy mb-1.5 transition-all ${mobileMenu ? "rotate-45 translate-y-[7px]" : ""}`} />
-              <div className={`w-6 h-0.5 bg-navy mb-1.5 transition-all ${mobileMenu ? "opacity-0" : ""}`} />
-              <div className={`w-6 h-0.5 bg-navy transition-all ${mobileMenu ? "-rotate-45 -translate-y-[7px]" : "w-4"}`} />
+              <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all ${mobileMenu ? "rotate-45 translate-y-[7px]" : ""}`} />
+              <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all ${mobileMenu ? "opacity-0" : ""}`} />
+              <div className={`w-6 h-0.5 bg-black transition-all ${mobileMenu ? "-rotate-45 -translate-y-[7px]" : "w-4"}`} />
             </button>
           </div>
         </div>
@@ -646,11 +646,11 @@ export default function HomePage() {
             >
               <div className="px-6 py-6 space-y-4">
                 {["Properties", "Services", "Concierge", "Contact"].map((item) => (
-                  <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenu(false)} className="block text-sm font-semibold text-navy py-2">
+                  <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenu(false)} className="block text-sm font-semibold text-black py-2">
                     {item}
                   </a>
                 ))}
-                <a href="#contact" className="btn-gold text-[11px] py-3 px-6 w-full justify-center mt-4">
+                <a href="#contact" className="btn-primary text-[11px] py-3 px-6 w-full justify-center mt-4">
                   <span><Calendar className="w-4 h-4" /> Book Consultation</span>
                 </a>
               </div>
@@ -670,8 +670,8 @@ export default function HomePage() {
         </motion.div>
 
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-[15%] right-[8%] w-[600px] h-[600px] rounded-full bg-gold/[0.06] blur-[150px] animate-float" />
-          <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] rounded-full bg-gold/[0.04] blur-[120px] animate-float-delay" />
+          <div className="absolute top-[15%] right-[8%] w-[600px] h-[600px] rounded-full bg-white/[0.06] blur-[150px] animate-float" />
+          <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] rounded-full bg-white/[0.04] blur-[120px] animate-float-delay" />
         </div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-12 w-full pt-40 pb-32">
@@ -682,7 +682,7 @@ export default function HomePage() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-10"
             >
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
               <span className="text-[11px] font-semibold text-white/80 uppercase tracking-[0.2em]">EstateX — Discover Properties That Match Your Vision</span>
             </motion.div>
 
@@ -695,7 +695,7 @@ export default function HomePage() {
             >
               Where Expertise Meets
               <br />
-              <span className="text-gradient-gold">Extraordinary Properties</span>
+              <span className="text-gradient-white">Extraordinary Properties</span>
             </motion.h1>
 
             <motion.p
@@ -714,10 +714,10 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <a href="#properties" className="btn-gold">
+              <a href="#properties" className="btn-primary">
                 <span><Calendar className="w-4 h-4" /> Explore Collection <ArrowRight className="w-4 h-4" /></span>
               </a>
-              <a href="#contact" className="btn-outline-dark !border-white/25 !text-white hover:!border-gold hover:!text-gold hover:!bg-white/5">
+              <a href="#contact" className="btn-outline-dark !border-white/25 !text-white hover:!border-white hover:!text-white hover:!bg-white/5">
                 <Play className="w-4 h-4" /> Book Private Viewing
               </a>
               <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book">
@@ -739,7 +739,7 @@ export default function HomePage() {
                   transition={{ duration: 0.8, delay: 1.2 + i * 0.15, ease }}
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <s.icon className="w-4 h-4 text-gold" />
+                    <s.icon className="w-4 h-4 text-white" />
                     <span className="text-3xl md:text-4xl font-bold tracking-tight text-white">
                       <AnimatedCounter value={s.value} prefix={s.prefix} suffix={s.suffix} />
                     </span>
@@ -752,8 +752,8 @@ export default function HomePage() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-navy/40 font-semibold">Scroll</span>
-          <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-[1px] h-10 bg-gradient-to-b from-gold to-transparent" />
+          <span className="text-[10px] uppercase tracking-[0.3em] text-black/40 font-semibold">Scroll</span>
+          <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="w-[1px] h-10 bg-gradient-to-b from-white to-transparent" />
         </motion.div>
       </section>
 
@@ -767,7 +767,7 @@ export default function HomePage() {
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-cream to-transparent z-10" />
           <div className="flex animate-marquee whitespace-nowrap">
             {[...marqueeLogos, ...marqueeLogos].map((logo, i) => (
-              <span key={i} className="mx-14 text-xl md:text-2xl font-bold text-navy/10 select-none" style={{ fontFamily: "var(--font-italiana)" }}>
+              <span key={i} className="mx-14 text-xl md:text-2xl font-bold text-black/10 select-none" style={{ fontFamily: "var(--font-italiana)" }}>
                 {logo}
               </span>
             ))}
@@ -785,8 +785,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeLeft">
-                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">What We Do</span>
-                <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight mb-8 text-navy" style={{ fontFamily: "var(--font-italiana)" }}>
+                <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">What We Do</span>
+                <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight mb-8 text-black" style={{ fontFamily: "var(--font-italiana)" }}>
                   Real Estate,
                   <br />Reimagined.
                 </h2>
@@ -795,7 +795,7 @@ export default function HomePage() {
                   Every property, every transaction, every detail — elevated beyond expectation.
                 </p>
                 <div className="flex gap-4">
-                  <a href="#contact" className="btn-gold text-[11px]"><span>Get Started <ArrowRight className="w-4 h-4" /></span></a>
+                  <a href="#contact" className="btn-primary text-[11px]"><span>Get Started <ArrowRight className="w-4 h-4" /></span></a>
                   <a href="#properties" className="btn-outline-dark text-[11px]">View Properties</a>
                 </div>
               </Reveal>
@@ -827,17 +827,17 @@ export default function HomePage() {
                     <div className="flex flex-col md:flex-row">
                       <div className="flex-1 p-8 md:p-10">
                         <div className="flex items-center justify-between mb-6">
-                          <div className="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center group-hover:bg-gold transition-colors duration-500">
-                            <s.icon className="w-5 h-5 text-gold group-hover:text-navy transition-colors duration-500" />
+                          <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center group-hover:bg-white transition-colors duration-500">
+                            <s.icon className="w-5 h-5 text-white group-hover:text-black transition-colors duration-500" />
                           </div>
-                          <ArrowUpRight className="w-5 h-5 text-slate-light group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                          <ArrowUpRight className="w-5 h-5 text-slate-light group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                         </div>
                         <p className="text-[11px] uppercase tracking-[0.2em] text-slate-light font-semibold mb-2">{s.num} — {s.title}</p>
-                        <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-navy" style={{ fontFamily: "var(--font-italiana)" }}>{s.headline}</h4>
+                        <h4 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-black" style={{ fontFamily: "var(--font-italiana)" }}>{s.headline}</h4>
                         <p className="text-slate-mid leading-relaxed mb-6 text-[15px]">{s.desc}</p>
                         <div className="flex flex-wrap gap-2">
                           {s.features.map((f) => (
-                            <span key={f} className="px-4 py-2 rounded-full bg-cream text-[11px] font-semibold text-navy/70 border border-black/5">{f}</span>
+                            <span key={f} className="px-4 py-2 rounded-full bg-cream text-[11px] font-semibold text-black/70 border border-black/5">{f}</span>
                           ))}
                         </div>
                       </div>
@@ -859,11 +859,11 @@ export default function HomePage() {
         <div className="grain-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full bg-gold/[0.04] blur-[180px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full bg-white/[0.04] blur-[180px]" />
         </div>
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
           <FadeIn className="text-center mb-16">
-            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Our Approach</span>
+            <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Our Approach</span>
             <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
               A Refined Process
             </h2>
@@ -879,7 +879,7 @@ export default function HomePage() {
               { num: "03", title: "Deliver", desc: "From negotiation to closing, we handle every detail personally." },
             ].map((step, i) => (
               <FadeIn key={step.num} delay={i * 0.15} className="approach-step">
-                <div className="text-5xl font-bold text-gold/20 mb-4" style={{ fontFamily: "var(--font-italiana)" }}>{step.num}</div>
+                <div className="text-5xl font-bold text-white/20 mb-4" style={{ fontFamily: "var(--font-italiana)" }}>{step.num}</div>
                 <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-italiana)" }}>{step.title}</h3>
                 <p className="text-[13px] text-white/40 leading-relaxed max-w-[220px] mx-auto">{step.desc}</p>
               </FadeIn>
@@ -893,16 +893,16 @@ export default function HomePage() {
       {/* ═══ QUOTE BANNER — Sarah Chen-Park ═══ */}
       <Reveal className="quote-banner py-28 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-white/[0.03] blur-[200px]" />
         </div>
         <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
           <FadeIn>
-            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <Quote className="w-10 h-10 text-white/30 mx-auto mb-8" />
             <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
               &ldquo;We weren&apos;t just looking for a house. We were looking for a home that reflected who we are. EstateX understood that from the first conversation.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30">
                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Sarah Chen-Park" className="w-full h-full object-cover" />
               </div>
               <div className="text-left">
@@ -922,7 +922,7 @@ export default function HomePage() {
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="text-center mb-16">
-            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Portfolio</span>
+            <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Portfolio</span>
             <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] mb-6 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
               Signature Collection
             </h2>
@@ -948,7 +948,7 @@ export default function HomePage() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: i * 0.04, ease }}
                       onClick={() => setTypeFilter(type)}
-                      className={`filter-pill ${typeFilter === type ? (type === "All" ? "filter-pill-gold active" : "active") : ""}`}
+                      className={`filter-pill ${typeFilter === type ? (type === "All" ? "filter-pill-white active" : "active") : ""}`}
                     >
                       <Icon className="w-3.5 h-3.5" />
                       {type}
@@ -1021,7 +1021,7 @@ export default function HomePage() {
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="px-4 py-1.5 rounded-full bg-gold text-navy text-[10px] font-bold uppercase tracking-wider">{p.tag}</span>
+                    <span className="px-4 py-1.5 rounded-full bg-white text-black text-[10px] font-bold uppercase tracking-wider">{p.tag}</span>
                   </div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/40 transition-colors">
@@ -1029,14 +1029,14 @@ export default function HomePage() {
                     </button>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                    <button className="w-full py-3 rounded-xl bg-white text-navy font-semibold text-[12px] hover:bg-gold hover:text-white transition-colors">
+                    <button className="w-full py-3 rounded-xl bg-white text-black font-semibold text-[12px] hover:bg-white hover:text-white transition-colors">
                       View Full Details
                     </button>
                   </div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-white/40 text-[11px] uppercase tracking-wider mb-2 font-medium">
-                    <MapPin className="w-3.5 h-3.5 text-gold" /> {p.location.split(",")[0]}
+                    <MapPin className="w-3.5 h-3.5 text-white" /> {p.location.split(",")[0]}
                   </div>
                   <h3 className="text-xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>{p.title}</h3>
                   <div className="flex items-center gap-4 text-[12px] text-white/40 mb-4">
@@ -1045,7 +1045,7 @@ export default function HomePage() {
                     <span className="flex items-center gap-1"><Square className="w-3.5 h-3.5" /> {p.sqft} ft²</span>
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <span className="text-xl font-bold text-gradient-gold">{p.price}</span>
+                    <span className="text-xl font-bold text-gradient-white">{p.price}</span>
                     <span className="text-[11px] text-white/30 font-medium">{p.type}</span>
                   </div>
                 </div>
@@ -1059,7 +1059,7 @@ export default function HomePage() {
               <p className="text-lg text-white/40 font-medium">No properties match your filters</p>
               <button
                 onClick={() => { setPriceFilter("All Prices"); setTypeFilter("All"); setBedsFilter("Any Beds"); setSortBy("Featured"); }}
-                className="mt-4 text-[12px] text-gold font-semibold uppercase tracking-wider hover:text-white transition-colors"
+                className="mt-4 text-[12px] text-white font-semibold uppercase tracking-wider hover:text-white transition-colors"
               >
                 Clear All Filters
               </button>
@@ -1073,11 +1073,11 @@ export default function HomePage() {
         <div className="grain-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/[0.04] blur-[150px]" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/[0.04] blur-[150px]" />
         </div>
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <FadeIn className="text-center mb-16">
-            <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">The Difference</span>
+            <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">The Difference</span>
             <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
               Why Discerning Clients Choose EstateX
             </h2>
@@ -1107,7 +1107,7 @@ export default function HomePage() {
               <FadeIn key={f.title} delay={i * 0.12}>
                 <div className="feat-card h-full">
                   <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mb-6">
-                    <f.icon className="w-5 h-5 text-gold" />
+                    <f.icon className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-italiana)" }}>{f.title}</h3>
                   <p className="text-[13px] text-white/40 leading-relaxed">{f.desc}</p>
@@ -1121,16 +1121,16 @@ export default function HomePage() {
       {/* ═══ QUOTE BANNER — Robert & Elena Harrington ═══ */}
       <Reveal className="quote-banner py-28 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-white/[0.03] blur-[200px]" />
         </div>
         <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
           <FadeIn>
-            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <Quote className="w-10 h-10 text-white/30 mx-auto mb-8" />
             <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
               &ldquo;The off-market access alone was worth it. We saw properties we didn&apos;t know existed. EstateX&apos;s network is unmatched in this industry.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30">
                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Robert & Elena Harrington" className="w-full h-full object-cover" />
               </div>
               <div className="text-left">
@@ -1147,14 +1147,14 @@ export default function HomePage() {
         <div className="grain-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-white/[0.03] blur-[200px]" />
         </div>
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <Reveal className="mb-12">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
-                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Track Record</span>
+                <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Track Record</span>
                 <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                   Recently Closed
                 </h2>
@@ -1179,11 +1179,11 @@ export default function HomePage() {
                   <img src={s.image} alt={s.location} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                   <div className="absolute top-3 right-3">
-                    <span className="px-3 py-1 rounded-full bg-gold text-navy text-[9px] font-bold uppercase tracking-wider">Sold</span>
+                    <span className="px-3 py-1 rounded-full bg-white text-black text-[9px] font-bold uppercase tracking-wider">Sold</span>
                   </div>
                 </div>
                 <div className="p-4">
-                  <div className="text-lg font-bold text-gradient-gold mb-1" style={{ fontFamily: "var(--font-italiana)" }}>{s.price}</div>
+                  <div className="text-lg font-bold text-gradient-white mb-1" style={{ fontFamily: "var(--font-italiana)" }}>{s.price}</div>
                   <div className="flex items-center gap-1.5 text-white/40 text-[11px]">
                     <MapPin className="w-3 h-3" /> {s.location}
                   </div>
@@ -1197,16 +1197,16 @@ export default function HomePage() {
       {/* ═══ QUOTE BANNER — Marcus Thompson ═══ */}
       <Reveal className="quote-banner py-28 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-white/[0.03] blur-[200px]" />
         </div>
         <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
           <FadeIn>
-            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <Quote className="w-10 h-10 text-white/30 mx-auto mb-8" />
             <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
               &ldquo;From the first meeting to handing us the keys, every detail was handled with care. This is how luxury real estate should be.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Marcus Thompson" className="w-full h-full object-cover" />
               </div>
               <div className="text-left">
@@ -1221,16 +1221,16 @@ export default function HomePage() {
       {/* ═══ THE ESTATEX DIFFERENCE — QUOTE BANNER ═══ */}
       <Reveal className="quote-banner py-28 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-gold/[0.03] blur-[200px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-white/[0.03] blur-[200px]" />
         </div>
         <div className="mx-auto max-w-[900px] px-6 lg:px-12 relative z-10 text-center">
           <FadeIn>
-            <Quote className="w-10 h-10 text-gold/30 mx-auto mb-8" />
+            <Quote className="w-10 h-10 text-white/30 mx-auto mb-8" />
             <blockquote className="text-[clamp(1.3rem,3vw,2.2rem)] font-bold leading-[1.4] tracking-tight text-white mb-8" style={{ fontFamily: "var(--font-italiana)" }}>
               &ldquo;EstateX found us our dream home in 3 weeks. The off-market access and personal attention was unlike anything we experienced.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30">
                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="James & Victoria M." className="w-full h-full object-cover" />
               </div>
               <div className="text-left">
@@ -1252,15 +1252,15 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-cover bg-center opacity-[0.03]" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/98 to-navy" />
         </div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/[0.04] blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-gold/[0.03] blur-[120px]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/[0.04] blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/[0.03] blur-[120px]" />
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-start">
             {/* ─── LEFT: Testimonials ─── */}
             <div>
               <Reveal className="mb-12">
-                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Testimonials</span>
+                <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Testimonials</span>
                 <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.08] tracking-tight mb-4 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                   Trusted by the Discerning
                 </h2>
@@ -1284,12 +1284,12 @@ export default function HomePage() {
                       t.size === "tall" ? "row-span-2" : ""
                     }`}
                   >
-                    <Quote className="w-6 h-6 text-gold/30 mb-4" />
+                    <Quote className="w-6 h-6 text-white/30 mb-4" />
                     <p className="text-[13px] text-white/55 leading-relaxed mb-6">
                       &ldquo;{t.quote}&rdquo;
                     </p>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gold/30 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 flex-shrink-0">
                         <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -1298,7 +1298,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex gap-0.5 flex-shrink-0">
                         {Array.from({ length: t.rating }).map((_, j) => (
-                          <Star key={j} className="w-3 h-3 fill-gold text-gold" />
+                          <Star key={j} className="w-3 h-3 fill-white text-white" />
                         ))}
                       </div>
                     </div>
@@ -1311,11 +1311,11 @@ export default function HomePage() {
             <div className="lg:sticky lg:top-32">
               <Reveal variant="fadeRight">
                 <div className="glass-card-dark p-8 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-60 h-60 bg-gold/[0.08] rounded-full blur-[100px] group-hover:bg-gold/[0.12] transition-all duration-700" />
+                  <div className="absolute top-0 right-0 w-60 h-60 bg-white/[0.08] rounded-full blur-[100px] group-hover:bg-white/[0.12] transition-all duration-700" />
 
                   <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mb-6 animate-pulse-gold">
-                      <Sparkles className="w-6 h-6 text-navy" />
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white to-white flex items-center justify-center mb-6 animate-pulse-white">
+                      <Sparkles className="w-6 h-6 text-black" />
                     </div>
 
                     <h3 className="text-2xl font-bold mb-3 tracking-tight text-white" style={{ fontFamily: "var(--font-italiana)" }}>
@@ -1334,7 +1334,7 @@ export default function HomePage() {
                         { icon: Globe, text: "Global Network" },
                       ].map((f) => (
                         <div key={f.text} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                          <f.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                          <f.icon className="w-4 h-4 text-white flex-shrink-0" />
                           <span className="text-[13px] text-white/60 font-medium">{f.text}</span>
                         </div>
                       ))}
@@ -1343,7 +1343,7 @@ export default function HomePage() {
                     <div className="flex flex-wrap gap-2 mb-8">
                       {["Market Predictions", "Price Analytics", "Lifestyle Matching"].map((f) => (
                         <span key={f} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/8 text-[10px] font-semibold text-white/50 flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3 h-3 text-gold" /> {f}
+                          <CheckCircle2 className="w-3 h-3 text-white" /> {f}
                         </span>
                       ))}
                     </div>
@@ -1355,7 +1355,7 @@ export default function HomePage() {
                       ].map((f) => (
                         <div key={f.title} className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
                           <div className="flex items-center gap-3">
-                            <f.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                            <f.icon className="w-4 h-4 text-white flex-shrink-0" />
                             <div>
                               <div className="text-[13px] font-semibold text-white">{f.title}</div>
                               <div className="text-[11px] text-white/30">{f.desc}</div>
@@ -1366,10 +1366,10 @@ export default function HomePage() {
                     </div>
 
                     <div className="flex flex-col gap-3 mb-8">
-                      <a href="#contact" className="btn-gold text-[11px] w-full justify-center">
+                      <a href="#contact" className="btn-primary text-[11px] w-full justify-center">
                         <span><MessageCircle className="w-4 h-4" /> Start Conversation <ArrowRight className="w-4 h-4" /></span>
                       </a>
-                      <a href="#contact" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px] w-full justify-center">
+                      <a href="#contact" className="btn-outline-dark !border-white/15 !text-white hover:!border-white hover:!text-white text-[11px] w-full justify-center">
                         <Calendar className="w-4 h-4" /> Schedule a Private Consultation
                       </a>
                       <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book w-full justify-center text-[11px]">
@@ -1381,19 +1381,19 @@ export default function HomePage() {
                       <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em] mb-4">Our Track Record</h4>
                       <div className="grid grid-cols-2 gap-3">
                         <div className="stat-mini">
-                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>2,400+</div>
+                          <div className="text-lg font-bold text-gradient-white" style={{ fontFamily: "var(--font-italiana)" }}>2,400+</div>
                           <div className="text-[10px] text-white/35 mt-0.5">Properties Sold</div>
                         </div>
                         <div className="stat-mini">
-                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>$4.8B+</div>
+                          <div className="text-lg font-bold text-gradient-white" style={{ fontFamily: "var(--font-italiana)" }}>$4.8B+</div>
                           <div className="text-[10px] text-white/35 mt-0.5">Total Value</div>
                         </div>
                         <div className="stat-mini">
-                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>98%</div>
+                          <div className="text-lg font-bold text-gradient-white" style={{ fontFamily: "var(--font-italiana)" }}>98%</div>
                           <div className="text-[10px] text-white/35 mt-0.5">Client Satisfaction</div>
                         </div>
                         <div className="stat-mini">
-                          <div className="text-lg font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>15+</div>
+                          <div className="text-lg font-bold text-gradient-white" style={{ fontFamily: "var(--font-italiana)" }}>15+</div>
                           <div className="text-[10px] text-white/35 mt-0.5">Years Experience</div>
                         </div>
                       </div>
@@ -1424,14 +1424,14 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
         </div>
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full bg-gold/[0.04] blur-[180px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full bg-white/[0.04] blur-[180px]" />
         </div>
 
         <div className="mx-auto max-w-[1100px] px-6 lg:px-12 relative z-10">
           <Reveal variant="fadeUp">
             <div className="license-card">
               <div className="text-center mb-10">
-                <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-4">Credentials</span>
+                <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-4">Credentials</span>
                 <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-white mb-4" style={{ fontFamily: "var(--font-italiana)" }}>
                   Licensed & Bonded Luxury Brokerage
                 </h2>
@@ -1445,8 +1445,8 @@ export default function HomePage() {
                   { icon: Search, label: "Privacy Guaranteed", desc: "Discretion by design" },
                 ].map((pillar) => (
                   <div key={pillar.label} className="text-center group">
-                    <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/10 group-hover:border-gold/20 transition-all duration-500">
-                      <pillar.icon className="w-5 h-5 text-gold" />
+                    <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mx-auto mb-4 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-500">
+                      <pillar.icon className="w-5 h-5 text-white" />
                     </div>
                     <div className="font-bold text-[13px] text-white mb-1">{pillar.label}</div>
                     <div className="text-[11px] text-white/30">{pillar.desc}</div>
@@ -1457,7 +1457,7 @@ export default function HomePage() {
               <div className="section-divider mb-10" />
 
               <div className="text-center">
-                <p className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gradient-gold tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
+                <p className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gradient-white tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
                   Trusted by $4.8B+ in transactions
                 </p>
               </div>
@@ -1479,7 +1479,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-24">
             <Reveal variant="fadeLeft">
-              <span className="inline-block text-[11px] font-bold text-gold uppercase tracking-[0.3em] mb-6">Get in Touch</span>
+              <span className="inline-block text-[11px] font-bold text-white uppercase tracking-[0.3em] mb-6">Get in Touch</span>
               <h2 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold leading-[1.1] tracking-tight mb-8 text-white" style={{ fontFamily: "var(--font-italiana)" }}>
                 Let&apos;s Discuss Your<br />Next Move
               </h2>
@@ -1495,7 +1495,7 @@ export default function HomePage() {
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-5">
                     <div className="w-12 h-12 rounded-xl glass-card-dark flex items-center justify-center flex-shrink-0">
-                      <c.icon className="w-5 h-5 text-gold" />
+                      <c.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <div className="font-semibold text-[15px] text-white">{c.label}</div>
@@ -1506,8 +1506,8 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#concierge" className="btn-gold text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with Us</span></a>
-                <a href="#" className="btn-outline-dark !border-white/15 !text-white hover:!border-gold hover:!text-gold text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
+                <a href="#concierge" className="btn-primary text-[11px]"><span><MessageCircle className="w-4 h-4" /> Chat with Us</span></a>
+                <a href="#" className="btn-outline-dark !border-white/15 !text-white hover:!border-white hover:!text-white text-[11px]"><Phone className="w-4 h-4" /> Request Callback</a>
                 <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="btn-book text-[11px]">
                   <Calendar className="w-4 h-4" /> Book a Private Consultation
                 </a>
@@ -1535,7 +1535,7 @@ export default function HomePage() {
                     <option>Investment Consultation</option>
                   </select>
                   <textarea rows={4} placeholder="Tell us about your ideal property..." className="input-dark resize-none" />
-                  <button type="submit" className="w-full btn-gold py-4">
+                  <button type="submit" className="w-full btn-primary py-4">
                     <span><Send className="w-4 h-4" /> Book a Consultation</span>
                   </button>
                 </form>
@@ -1551,16 +1551,16 @@ export default function HomePage() {
       </Reveal>
 
       {/* ═══ FOOTER ═══ */}
-      <footer className="bg-navy pt-24 pb-10">
+      <footer className="bg-black pt-24 pb-10">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
           <div className="grid md:grid-cols-4 gap-16 mb-20">
             <div className="md:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-navy" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white to-white flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-black" />
                 </div>
                 <span className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-italiana)" }}>
-                  Estate<span className="text-gold">X</span>
+                  Estate<span className="text-white">X</span>
                 </span>
               </div>
               <p className="text-[13px] text-white/35 leading-relaxed max-w-xs">
@@ -1577,20 +1577,20 @@ export default function HomePage() {
                 <ul className="space-y-3.5">
                   {col.links.map((link) => (
                     <li key={link}>
-                      <a href="#" className="text-[13px] text-white/40 hover:text-gold transition-colors duration-300">{link}</a>
+                      <a href="#" className="text-[13px] text-white/40 hover:text-white transition-colors duration-300">{link}</a>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="divider-gold mb-8" />
+          <div className="divider-white mb-8" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[12px] text-white/25">&copy; 2026 EstateX. All rights reserved.</p>
             <div className="flex gap-6 items-center">
-              <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="text-[12px] text-gold hover:text-white transition-colors font-semibold">Book Now</a>
+              <a href="https://calendar.app.google/XaCK8h1t1hgx78776" target="_blank" rel="noopener noreferrer" className="text-[12px] text-white hover:text-white transition-colors font-semibold">Book Now</a>
               {["LinkedIn", "Twitter", "Instagram"].map((s) => (
-                <a key={s} href="#" className="text-[12px] text-white/25 hover:text-gold transition-colors">{s}</a>
+                <a key={s} href="#" className="text-[12px] text-white/25 hover:text-white transition-colors">{s}</a>
               ))}
             </div>
           </div>
@@ -1604,7 +1604,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={() => setSelectedProperty(null)}
           >
             <motion.div
@@ -1625,7 +1625,7 @@ export default function HomePage() {
                   <X className="w-5 h-5 text-white" />
                 </button>
                 <div className="absolute top-5 left-5">
-                  <span className="px-4 py-1.5 rounded-full bg-gold text-navy text-[10px] font-bold uppercase tracking-wider">{selectedProperty.tag}</span>
+                  <span className="px-4 py-1.5 rounded-full bg-white text-black text-[10px] font-bold uppercase tracking-wider">{selectedProperty.tag}</span>
                 </div>
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="text-[11px] text-white/60 uppercase tracking-[0.15em] font-semibold mb-2 flex items-center gap-2">
@@ -1638,52 +1638,52 @@ export default function HomePage() {
               <div className="p-8 md:p-12">
                 <div className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-black/5">
                   <div className="text-center px-6">
-                    <div className="text-2xl font-bold text-navy">{selectedProperty.beds}</div>
+                    <div className="text-2xl font-bold text-black">{selectedProperty.beds}</div>
                     <div className="text-[11px] text-slate-mid uppercase tracking-wider mt-1">Bedrooms</div>
                   </div>
                   <div className="w-px h-10 bg-black/5" />
                   <div className="text-center px-6">
-                    <div className="text-2xl font-bold text-navy">{selectedProperty.baths}</div>
+                    <div className="text-2xl font-bold text-black">{selectedProperty.baths}</div>
                     <div className="text-[11px] text-slate-mid uppercase tracking-wider mt-1">Bathrooms</div>
                   </div>
                   <div className="w-px h-10 bg-black/5" />
                   <div className="text-center px-6">
-                    <div className="text-2xl font-bold text-navy">{selectedProperty.sqft}</div>
+                    <div className="text-2xl font-bold text-black">{selectedProperty.sqft}</div>
                     <div className="text-[11px] text-slate-mid uppercase tracking-wider mt-1">Sq. Feet</div>
                   </div>
                   <div className="w-px h-10 bg-black/5" />
                   <div className="text-center px-6">
-                    <div className="text-2xl font-bold text-navy">{selectedProperty.parking}</div>
+                    <div className="text-2xl font-bold text-black">{selectedProperty.parking}</div>
                     <div className="text-[11px] text-slate-mid uppercase tracking-wider mt-1">Parking</div>
                   </div>
                   <div className="w-px h-10 bg-black/5" />
                   <div className="text-center px-6">
-                    <div className="text-2xl font-bold text-navy">{selectedProperty.year}</div>
+                    <div className="text-2xl font-bold text-black">{selectedProperty.year}</div>
                     <div className="text-[11px] text-slate-mid uppercase tracking-wider mt-1">Year Built</div>
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                   <div className="md:col-span-2">
-                    <h3 className="text-xl font-bold text-navy mb-4" style={{ fontFamily: "var(--font-italiana)" }}>About This Property</h3>
+                    <h3 className="text-xl font-bold text-black mb-4" style={{ fontFamily: "var(--font-italiana)" }}>About This Property</h3>
                     <p className="text-[15px] text-slate-mid leading-relaxed mb-6">{selectedProperty.description}</p>
                     <div className="flex items-center gap-3 mb-4">
-                      <Briefcase className="w-4 h-4 text-gold" />
-                      <span className="text-[13px] text-navy font-medium">Listed by {selectedProperty.owner}</span>
+                      <Briefcase className="w-4 h-4 text-white" />
+                      <span className="text-[13px] text-black font-medium">Listed by {selectedProperty.owner}</span>
                     </div>
                   </div>
                   <div className="bg-cream rounded-2xl p-6">
                     <div className="text-center mb-6">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center mx-auto mb-3">
-                        <Camera className="w-7 h-7 text-navy" />
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-white to-white flex items-center justify-center mx-auto mb-3">
+                        <Camera className="w-7 h-7 text-black" />
                       </div>
-                      <div className="font-bold text-navy text-[15px]">{selectedProperty.agent}</div>
+                      <div className="font-bold text-black text-[15px]">{selectedProperty.agent}</div>
                       <div className="text-[11px] text-slate-mid mt-1">{selectedProperty.agentRole}</div>
                     </div>
                     <div className="text-center mb-4">
-                      <div className="text-3xl font-bold text-gradient-gold" style={{ fontFamily: "var(--font-italiana)" }}>{selectedProperty.price}</div>
+                      <div className="text-3xl font-bold text-gradient-white" style={{ fontFamily: "var(--font-italiana)" }}>{selectedProperty.price}</div>
                     </div>
-                    <a href="#contact" className="btn-gold text-[11px] w-full justify-center" onClick={() => setSelectedProperty(null)}>
+                    <a href="#contact" className="btn-primary text-[11px] w-full justify-center" onClick={() => setSelectedProperty(null)}>
                       <span><Calendar className="w-4 h-4" /> Schedule Viewing</span>
                     </a>
                   </div>
@@ -1691,7 +1691,7 @@ export default function HomePage() {
 
                 <div className="flex flex-wrap gap-2">
                   {["Smart Home", "Wine Cellar", "Pool", "Gym", "Concierge", "Rooftop"].map((a) => (
-                    <span key={a} className="px-4 py-2 rounded-full bg-cream text-[11px] font-semibold text-navy/70 border border-black/5">{a}</span>
+                    <span key={a} className="px-4 py-2 rounded-full bg-cream text-[11px] font-semibold text-black/70 border border-black/5">{a}</span>
                   ))}
                 </div>
               </div>
